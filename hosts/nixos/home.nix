@@ -101,6 +101,10 @@
         error_symbol = "[❯](red)";
         vimcmd_symbol = "[❮](green)";
       };
+      git_branch = {
+        format = "[$branch]($style)";
+        style = "bright-black";
+      };
     };
   };
 }
