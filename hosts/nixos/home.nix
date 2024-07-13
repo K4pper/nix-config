@@ -80,4 +80,8 @@
       vim = "nvim";
     };
   };
+
+  programs.starship = {
+    enable = true;
+  };
 }
