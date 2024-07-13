@@ -85,7 +85,7 @@
     enable = true;
     enableZshIntegration = true;
     settings = {
-      format = lib.concatStrings [
+      format = [
       "$username"
       "$hostname"
       "$directory"
