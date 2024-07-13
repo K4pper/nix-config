@@ -78,6 +78,6 @@
     enable = true;
     shellAliases = {
       vim = "nvim";
-    }
+    };
   };
 }
