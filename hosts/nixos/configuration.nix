@@ -15,6 +15,11 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
+  # Set ZSH as default shell
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
+
   boot.initrd.luks.devices."luks-de511a4a-f57b-49de-bc6a-4307c085d577".device = "/dev/disk/by-uuid/de511a4a-f57b-49de-bc6a-4307c085d577";
   # Setup keyfile
   boot.initrd.secrets = {
