@@ -86,16 +86,21 @@
     enableZshIntegration = true;
     settings = {
       format = lib.concatStrings [
-      "$username"
-      "$hostname"
-      "$directory"
-      "$git_branch"
-      "$git_state"
-      "$git_status"
-      "$cmd_duration"
-      "$line_break"
-      "$character"
+       "$username"
+       "$hostname"
+       "$directory"
+       "$git_branch"
+       "$git_state"
+       "$git_status"
+       "$cmd_duration"
+       "$line_break"
+       "$character"
       ];
+      character = {
+        success_symbol = "[❯](purple)";
+        error_symbol = "[❯](red)";
+        vimcmd_symbol = "[❮](green)";
+      };
     };
   };
 }
