@@ -1,6 +1,6 @@
 {
   config = {
-    opts = {
+    options = {
       number = true;
       relativenumber = true;
       cursorline = true;
