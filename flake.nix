@@ -29,8 +29,9 @@
         kapper = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./hosts/nixos/home.nix
+            ./home.nix
             nixvim.homeManagerModules.nixvim
+            ./modules
           ];
         };
       };
