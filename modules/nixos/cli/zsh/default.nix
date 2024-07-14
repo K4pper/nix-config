@@ -6,6 +6,6 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
-    dotDir = ".config/zsh"
+    dotDir = ".config/zsh";
   };
 }
