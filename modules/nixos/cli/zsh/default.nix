@@ -2,7 +2,9 @@
 {
   programs.zsh = {
     enable = true;
-    shellAliases = {};
+    shellAliases = {
+      ls = "eza";
+    };
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;

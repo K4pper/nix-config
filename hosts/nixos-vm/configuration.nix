@@ -110,6 +110,7 @@
     _1password-gui
     xclip
     fzf
+    eza
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
