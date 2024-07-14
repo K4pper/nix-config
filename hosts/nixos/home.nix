@@ -68,7 +68,7 @@
   #  /etc/profiles/per-user/kapper/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-     EDITOR = "nvim";
+    # EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
@@ -148,6 +148,9 @@
     vimdiffAlias = true;
     viAlias = true;
     vimAlias = true;
+    clipboard = {
+      register = "unnamedplus";
+    };
   };
 
 }
