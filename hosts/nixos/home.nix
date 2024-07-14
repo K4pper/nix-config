@@ -149,4 +149,8 @@
     vimdiffAlias = true;
   };
 
+  programs.nixvim = {
+    enable = true;
+  };
+
 }
