@@ -106,7 +106,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     wget
-    git
     _1password-gui
     xclip
     fzf
