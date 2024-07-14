@@ -21,7 +21,7 @@
       nixos = lib.nixosSystem {
         inherit system;
 	      modules = [
-            hosts/nixos/configuration.nix
+            ./hosts/nixos/configuration.nix
           ];
       };
     };
@@ -29,7 +29,7 @@
         kapper = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            /hosts/nixos/home.nix
+            ./hosts/nixos/home.nix
             nixvim.homeManagerModules.nixvim
           ];
         };
