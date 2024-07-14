@@ -3,4 +3,4 @@
   imports = [
     ./nixos/cli/starship
   ];
-};
+}
