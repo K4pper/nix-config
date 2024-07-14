@@ -114,7 +114,7 @@
         staged = "";
         renamed = "";
         deleted = "";
-        staged = "≡";
+        stashed = "≡";
       };
     };
   };
