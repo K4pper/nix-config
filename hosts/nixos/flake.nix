@@ -30,7 +30,7 @@
           inherit pkgs;
           modules = [
             ./home.nix
-            inputs.nixvim.homeManagerModules.nixvim
+            nixvim.homeManagerModules.nixvim
           ];
         };
       };
