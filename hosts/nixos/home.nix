@@ -1,8 +1,4 @@
-{ config, pkgs, lib, nixvim, ... }:
-
-imports = [
-  inputs.nixvim.homeManagerModules.nixvim
-];
+{ config, pkgs, lib, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -148,8 +144,6 @@ imports = [
     };
   };
 
-  programs.nixvim = {
     enable = true;
-    defaultEditor = true;
   };
 }
