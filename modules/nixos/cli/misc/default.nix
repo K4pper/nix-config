@@ -7,5 +7,6 @@
     gcc
     nodejs_22
     bat
+    lazygit
   ];
 }
