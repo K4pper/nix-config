@@ -150,6 +150,11 @@
     vimAlias = true;
     clipboard = {
       register = "unnamedplus";
+      providers = {
+        xclip = {
+          enable = true;
+        };
+      };
     };
   };
 
