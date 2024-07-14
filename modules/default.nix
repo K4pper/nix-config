@@ -6,5 +6,6 @@
     ./nixos/cli/nvim
     ./nixos/cli/zoxide
     ./nixos/cli/git
+    ./nixos/cli/misc
   ];
 }
