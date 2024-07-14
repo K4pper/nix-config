@@ -79,6 +79,17 @@
     shellAliases = {
       vim = "nvim";
     };
+    plugins = [
+      {
+        # zsh-autosuggestions
+        name = "zsh-autosuggestions";
+        src = pkgs.fetchFromGithub {
+          owner = "zsh-users";
+          repo = "zsh-autosuggestions";
+          rev = "v0.7.0";
+        };
+      }
+    ];
   };
 
   programs.starship = {
