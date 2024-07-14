@@ -1,4 +1,4 @@
-{ config, pkgs, lib, nixvim, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.username = "kapper";
