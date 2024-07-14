@@ -83,7 +83,7 @@
       {
         # zsh-autosuggestions
         name = "zsh-autosuggestions";
-        src = pkgs.fetchFromGithub {
+        src = pkgs.fetchFromGitHub {
           owner = "zsh-users";
           repo = "zsh-autosuggestions";
           rev = "v0.7.0";
