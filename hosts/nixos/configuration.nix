@@ -109,6 +109,7 @@
     git
     _1password-gui
     xclip
+    fzf
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
