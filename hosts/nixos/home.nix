@@ -76,9 +76,7 @@
 
   programs.zsh = {
     enable = true;
-    shellAliases = {
-      vim = "nvim";
-    };
+    shellAliases = {};
     plugins = [
       {
         # zsh-autosuggestions
