@@ -97,7 +97,7 @@
           owner = "zsh-users";
           repo = "zsh-syntax-highlighting";
           rev = "0.8.0";
-          sha256 = ""
+          sha256 = "";
         };
       }
     ];
