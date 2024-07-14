@@ -108,6 +108,7 @@
     wget
     git
     _1password-gui
+    xclip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
