@@ -143,4 +143,8 @@
       };
     };
   };
+
+  programs.nixvim = {
+    defaultEditor = true;
+  };
 }
