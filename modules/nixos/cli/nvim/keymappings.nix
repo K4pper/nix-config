@@ -9,7 +9,7 @@
       {
         action = "<cmd>bprevious<cr>";
         key = "<S-h>";
-      };
+      }
     ];
   };
 }
