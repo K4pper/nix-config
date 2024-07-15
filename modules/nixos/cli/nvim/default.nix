@@ -1,7 +1,7 @@
 {...}:
 {
   imports = [
-    ./settings.nix
+    ./options.nix
   ];
   programs.nixvim = {
     enable = true;

@@ -1,7 +1,0 @@
-{self, ...}:
-{
-  programs.nixvim.opts = {
-    number = true;
-    relativenumber = true;
-  };
-}
