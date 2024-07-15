@@ -8,7 +8,7 @@
       return{
         font = wezterm.font("JetBrains Mono"),
         font_size = 12.0,
-        color_scheme = "Tokyo Night (Gogh)",
+        color_scheme = "Tokyo Night Storm",
       }
     '';
   };
