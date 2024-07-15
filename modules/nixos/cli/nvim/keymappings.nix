@@ -1,7 +1,7 @@
 {
   programs.nixvim = {
     globals = {
-      mapleader = " ";
+      mapleader = ",";
       maplocalleader = "\\";
     };
 
