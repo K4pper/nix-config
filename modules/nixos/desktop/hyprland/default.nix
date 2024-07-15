@@ -15,6 +15,12 @@
       "waybar & swaync"
       "polkit-kde-agent"
     ];
+    env = [
+      "LIBVA_DRIVER+NAME,nvidia"
+      "XDG_SESSION_TYPE,wayland"
+      "GBM_BACKEND,nvidia-drm"
+      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+    ];
 
     input = {
       kb_layout = "us";
@@ -30,6 +36,7 @@
     };
     cursor = {
       inactive_timeout = 3;
+      no_hardware_cursors = true;
     };
     decoration = {
       rounding = 2;
