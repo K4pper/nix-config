@@ -26,6 +26,18 @@ services.pipewire = {
     xwayland.enable = true;
   };
 
+  # Screensharing and stuff + portal for gnome-keyring
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = with pkgs; [ 
+      xdg-desktop-portal
+      xdg-desktop-portal-gtk 
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-wlr
+    ];
+  };
+
   # Set ZSH as default shell
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
@@ -103,7 +115,6 @@ services.pipewire = {
     _1password-gui
     wofi
     firefox
-    xdg-desktop-portal-hyprland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
