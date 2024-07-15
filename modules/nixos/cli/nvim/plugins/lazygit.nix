@@ -1,5 +1,7 @@
 {
-  programs.nixvim.plugins.lazygit = {
-    enable = true;
+  programs.nixvim = {
+    plugins.lazygit} = {
+      enable = true;
+    };
   };
 }
