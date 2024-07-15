@@ -4,7 +4,6 @@
       enable = true;
       nixvimInjections = true;
       folding = true;
-      settings = {
       };
     };
   };
