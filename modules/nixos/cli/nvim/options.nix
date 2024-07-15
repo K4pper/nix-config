@@ -15,6 +15,7 @@
       cursorline = true;
       expandtab = true;
       tabstop = 2;
+      foldlevel = 99;
     };
   };
 }
