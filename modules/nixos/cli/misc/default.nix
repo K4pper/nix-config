@@ -8,5 +8,6 @@
     nodejs_22
     bat
     lazygit
+    nerdfonts
   ];
 }
