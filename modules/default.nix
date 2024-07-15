@@ -9,5 +9,7 @@
     ./nixos/cli/misc
     ./nixos/apps/wezterm
     ./nixos/desktop/hyprland
+    ./nixos/desktop/waybar
+    ./nixos/desktop/swaync
   ];
 }
