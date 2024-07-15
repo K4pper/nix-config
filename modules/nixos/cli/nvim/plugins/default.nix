@@ -1,6 +1,7 @@
 {
   imports = [
     ./lazygit.nix
+    ./neo-tree.nix
   ];
 
   programs.nixvim = {

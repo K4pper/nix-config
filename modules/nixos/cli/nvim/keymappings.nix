@@ -40,12 +40,6 @@
         action = "<cmd>noh<cr><esc>";
         key = "<esc>";
       }
-
-      # Open Lazygit
-      {
-        action = "<cmd>LazyGit<cr>";
-        key = "<leader>gg";
-      }
     ];
   };
 }
