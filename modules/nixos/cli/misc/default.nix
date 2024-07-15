@@ -9,5 +9,6 @@
     bat
     lazygit
     nerdfonts
+    fd
   ];
 }

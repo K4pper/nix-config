@@ -7,5 +7,6 @@
     ./nixos/cli/zoxide
     ./nixos/cli/git
     ./nixos/cli/misc
+    ./nixos/apps/wezterm
   ];
 }
