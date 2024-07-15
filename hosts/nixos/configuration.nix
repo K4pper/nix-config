@@ -15,6 +15,11 @@
     xwayland.enable = true;
   };
 
+  # Set ZSH as default shell
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
+
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
