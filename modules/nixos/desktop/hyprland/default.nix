@@ -4,6 +4,7 @@
     polkit-kde-agent
     wofi
   ];
+
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "$SUPER";
@@ -12,6 +13,7 @@
     "$lock" = "swaylock";
     exec-once = [
       "waybar & swaync"
+      "polkit-kde-agent"
     ];
 
     input = {
