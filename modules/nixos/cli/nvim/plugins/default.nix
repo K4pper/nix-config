@@ -1,5 +1,7 @@
 {
-  imports = [];
+  imports = [
+    ./lazygit.nix
+  ];
 
   programs.nixvim = {
     colorschemes.tokyonight = {
