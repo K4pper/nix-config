@@ -1,5 +1,9 @@
 {pkgs, ...}:
 {
+  home.packages = with pkgs; [
+    polkit-kde-agent
+    wofi
+  ];
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "$SUPER";

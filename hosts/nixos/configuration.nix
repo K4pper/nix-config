@@ -95,9 +95,9 @@ services.pipewire = {
   };
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
