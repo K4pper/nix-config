@@ -1,6 +1,6 @@
 {
 
-  description = "My first flake!";
+  description = "My nixos flake";
 
   inputs = {
     # Nix knows where nixpkgs are, therefore the full github URI is not needed
@@ -24,7 +24,15 @@
             ./hosts/nixos-vm/configuration.nix
           ];
       };
+
+      nixos = lib.nixosSystem {
+          inherit system
+          modules = [
+            ./hosts/nixos/configuration.nix
+            ];
+        };
     };
+
     homeConfigurations = {
         kapper = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
