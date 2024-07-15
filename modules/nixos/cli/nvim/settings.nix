@@ -1,3 +1,4 @@
+{ self, ... }:
 {
   globalOpts = {
     number = true;
