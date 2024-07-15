@@ -10,6 +10,16 @@
       ./hardware-configuration.nix
     ];
 
+# rtkit is optional but recommended
+security.rtkit.enable = true;
+services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  alsa.support32Bit = true;
+  pulse.enable = true;
+  jack.enable = true;
+};
+
   # Install hyprland
   programs.hyprland = {
     enable = true;
@@ -93,6 +103,7 @@
     _1password-gui
     wofi
     firefox
+    xdg-desktop-portal-hyprland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
