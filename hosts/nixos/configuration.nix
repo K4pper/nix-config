@@ -119,6 +119,7 @@ services.pipewire = {
     _1password-gui
     wofi
     firefox
+    egl-wayland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
