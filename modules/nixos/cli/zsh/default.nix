@@ -4,6 +4,7 @@
     enable = true;
     shellAliases = {
       ls = "eza";
+      lg = "lazygit";
     };
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
