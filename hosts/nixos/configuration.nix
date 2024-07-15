@@ -38,6 +38,10 @@ services.pipewire = {
     ];
   };
 
+  virtualisation.libvirtd.enable = true;
+  virtualisation.podman.enable = true;
+  programs.virt-manager.enable = true;
+
   # Set ZSH as default shell
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
