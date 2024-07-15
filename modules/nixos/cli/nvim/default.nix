@@ -3,6 +3,7 @@
   imports = [
     ./options.nix
     ./plugins
+    ./keymappings.nix
   ];
   programs.nixvim = {
     enable = true;
