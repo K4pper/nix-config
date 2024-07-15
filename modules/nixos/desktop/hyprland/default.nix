@@ -49,6 +49,9 @@
       shadow_range = 4;
       shadow_render_power = 3;
     };
+    monitors = [
+      "monitor=DP-3,5120x1440@60,0x0,1"
+    ];
     bind = [
       "$mainMod, T, exec, $terminal"
       "$mainMod, Q, exit"
