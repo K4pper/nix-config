@@ -7,7 +7,6 @@
       settings = {
         highlight.enable = true;
         indent.enable = true;
-        ensure_installed = "'nix', 'c', 'markdown', 'rust', 'yaml', 'docker', 'helm', 'rust', 'json', 'bicep'";
       };
     };
   };
