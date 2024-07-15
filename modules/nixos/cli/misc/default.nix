@@ -10,5 +10,7 @@
     lazygit
     nerdfonts
     fd
+    eza
+    fzf
   ];
 }
