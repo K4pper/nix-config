@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
     ];
 
+  # Install hyprland
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;

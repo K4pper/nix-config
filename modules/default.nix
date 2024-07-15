@@ -8,5 +8,6 @@
     ./nixos/cli/git
     ./nixos/cli/misc
     ./nixos/apps/wezterm
+    ./nixos/desktop/hyprland
   ];
 }
