@@ -10,7 +10,7 @@
       # Move to window with <ctrl> hjkl keys
       {
         action = "<C-w>h";
-        key = "<C-h>"
+        key = "<C-h>";
       }
       {
         action = "<C-w>j";
