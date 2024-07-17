@@ -23,3 +23,4 @@
   };
   home.sessionVariables.GTK_THEME = "Tokyo-Night";
 }
+
