@@ -11,5 +11,6 @@
     ./nixos/desktop/hyprland
     ./nixos/desktop/waybar
     ./nixos/desktop/swaync
+    ./nixos/desktop/gtk
   ];
 }

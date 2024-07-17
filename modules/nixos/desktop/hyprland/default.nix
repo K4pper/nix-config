@@ -31,7 +31,7 @@
       gaps_in = 2;
       gaps_out = 5;
       border_size = 1;
-      layout = "dwindle";
+      layout = "master";
       allow_tearing = false;
     };
     cursor = {
@@ -53,7 +53,11 @@
       "$mainMod, T, exec, $terminal"
       "$mainMod, Q, exit"
       "ALT, SPACE, exec, $menu"
+      "$mainMod, C, killactive"
     ];
+    xwayland = {
+      force_zero_scaling = true;
+    };
   };
 
 }
