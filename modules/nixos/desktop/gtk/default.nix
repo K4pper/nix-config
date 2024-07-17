@@ -4,11 +4,11 @@
     enable = true;
     iconTheme = {
       name = "Papirus-dark";
-      package = "pkgs.papirus-icon-theme";
+      package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = "Tokyo-Night";
-      package = "pkgs.tokyonight-gtk-theme";
+      name = "tokyonight-gtk-theme_full";
+      package = pkgs.tokyonight-gtk-theme;
     };
     gtk3.extraConfig = {
       Settings = ''
@@ -21,6 +21,6 @@
       '';
     };
   };
-  home.sessionVariables.GTK_THEME = "Tokyo-Night";
+  home.sessionVariables.GTK_THEME = "tokyonight-gtk-theme_full";
 }
 
