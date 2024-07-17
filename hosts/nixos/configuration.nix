@@ -9,21 +9,14 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-
-# rtkit is optional but recommended
-security.rtkit.enable = true;
-services.pipewire = {
-  enable = true;
-  alsa.enable = true;
-  alsa.support32Bit = true;
-  pulse.enable = true;
-  jack.enable = true;
-};
-
-  # Install hyprland
-  programs.hyprland = {
+  # rtkit is optional but recommended
+  security.rtkit.enable = true;
+  services.pipewire = {
     enable = true;
-    xwayland.enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
   };
 
   # Screensharing and stuff + portal for gnome-keyring
@@ -38,6 +31,7 @@ services.pipewire = {
     ];
   };
 
+
   virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
   programs.virt-manager.enable = true;
@@ -47,25 +41,17 @@ services.pipewire = {
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
-  # Enable OpenGL
-  hardware.opengl = {
+  # Hyprland
+  programs.hyprland = {
     enable = true;
-  };
-
-  # Load nvidia Driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    xwayland.enable = true;
   };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-364ef2e2-5b06-47f7-a529-54c0aaccbd82".device = "/dev/disk/by-uuid/364ef2e2-5b06-47f7-a529-54c0aaccbd82";
+  boot.initrd.luks.devices."luks-40415a86-9ac7-4218-95c9-945409e739c5".device = "/dev/disk/by-uuid/40415a86-9ac7-4218-95c9-945409e739c5";
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -116,10 +102,11 @@ services.pipewire = {
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-    _1password-gui
-    wofi
-    firefox
-    egl-wayland
+  firefox
+  wofi
+  _1password-gui
+  kitty
+  git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -136,7 +123,7 @@ services.pipewire = {
   # services.openssh.enable = true;
 
   # Enable Flakes
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
