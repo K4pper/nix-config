@@ -7,6 +7,10 @@
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
+    monitor = [
+      "DP-1, 2560x1440@170, 0x0, 1"
+      "DP-2, 2560x1440@170, 2560x0, 1"
+    ];
     "$mainMod" = "$SUPER";
     "$terminal" = "wezterm";
     "$menu" = "wofi --show drun";
@@ -34,8 +38,7 @@
     master = {
      allow_small_split = true;
      orientation = "center";
-     always_center_master = true;
-     mfact = "0.40";
+     mfact = "0.55";
     };
     cursor = {
       inactive_timeout = 3;
@@ -70,8 +73,15 @@
       "$mainMod, 4, workspace, 4"
       "$mainMod, 5, workspace, 5"
       "$mainMod, 6, workspace, 6"
+      "$mainMod SHIFT, 1, movetoworkspace, 1"
+      "$mainMod SHIFT, 2, movetoworkspace, 2"
+      "$mainMod SHIFT, 3, movetoworkspace, 3"
+      "$mainMod SHIFT, 4, movetoworkspace, 4"
+      "$mainMod SHIFT, 5, movetoworkspace, 5"
+      "$mainMod SHIFT, 6, movetoworkspace, 6"
       "$mainMod SHIFT, M, layoutmsg, addmaster"
       "$mainMod SHIFT, N, layoutmsg, removemaster"
+      "$mainMod, M, fullscreen"
     ];
     xwayland = {
       force_zero_scaling = true;

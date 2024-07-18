@@ -7,6 +7,7 @@
     ./nixos/cli/zoxide
     ./nixos/cli/git
     ./nixos/cli/misc
+    ./nixos/cli/yazi
     ./nixos/apps/wezterm
     ./nixos/apps/1password
     ./nixos/apps/obsidian

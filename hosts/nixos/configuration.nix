@@ -9,6 +9,11 @@
       ./hardware-configuration.nix
     ];
 
+  programs.corectrl.enable = true;
+
+  # Gamer confirmed
+  programs.steam.enable = true;
+
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
   
@@ -107,6 +112,7 @@
   #  wget
   firefox
   wofi
+  prismlauncher
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
