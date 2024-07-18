@@ -9,6 +9,7 @@
     ./nixos/cli/misc
     ./nixos/apps/wezterm
     ./nixos/apps/1password
+    ./nixos/apps/discord
     ./nixos/desktop/hyprland
     ./nixos/desktop/waybar
     ./nixos/desktop/swaync
