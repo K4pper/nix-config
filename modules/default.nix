@@ -16,5 +16,6 @@
     ./nixos/desktop/swaync
     ./nixos/desktop/gtk
     ./nixos/desktop/swaylock
+    ./nixos/desktop/swayidle
   ];
 }
