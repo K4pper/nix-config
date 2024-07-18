@@ -1,7 +1,7 @@
 {pkgs, ...}:
 {
   home.packages = with pkgs; [
-    polkit-kde-agent
+    lxqt.lxqt-policykit
     wofi
   ];
 
@@ -13,7 +13,7 @@
     "$lock" = "swaylock";
     exec-once = [
       "waybar & swaync"
-      "polkit-kde-agent"
+      "lxqt-policy-agent"
     ];
     input = {
       kb_layout = "us";
@@ -22,6 +22,8 @@
       accel_profile = "flat";
       force_no_accel = true;
     };
+    env = [
+    ];
     general = {
       gaps_in = 2;
       gaps_out = 5;
