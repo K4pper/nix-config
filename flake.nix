@@ -36,12 +36,6 @@
     homeConfigurations = {
         kapper = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = {
-            pkgs = import nixpkgs {
-              config.allowUnfree = true;
-              inherit system;
-            };
-          };
           modules = [
             ./home.nix
             nixvim.homeManagerModules.nixvim
