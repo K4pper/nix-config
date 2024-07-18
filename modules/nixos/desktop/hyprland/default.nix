@@ -58,6 +58,7 @@
     };
     bind = [
       "$mainMod, T, exec, $terminal"
+      "$mainMod, L, exec, $lock"
       "$mainMod, Q, exit"
       "ALT, SPACE, exec, $menu"
       "$mainMod, C, killactive"
