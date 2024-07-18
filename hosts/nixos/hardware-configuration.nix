@@ -17,6 +17,11 @@
     { device = "/dev/disk/by-uuid/2a974b52-5d14-4ded-85a7-14bf2640ca98";
       fsType = "ext4";
     };
+  
+  fileSystems."/mnt/ssd" =
+    { device = "/dev/disk/by-uuid/96EEEADEEEEAB621";
+      fsType = "ext4";
+    };
 
   boot.initrd.luks.devices."luks-f93e4ba8-3b95-4fe5-ac00-21688ce9686f".device = "/dev/disk/by-uuid/f93e4ba8-3b95-4fe5-ac00-21688ce9686f";
 
