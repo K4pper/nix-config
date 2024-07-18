@@ -8,7 +8,7 @@
   ];
 
   programs.nixvim = {
-    colorschemes.tokyonight = {
+    colorschemes.dracula = {
       enable = true;
     };
   };

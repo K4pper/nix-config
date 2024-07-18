@@ -105,7 +105,6 @@
   firefox
   wofi
   _1password-gui
-  nwg-look
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
