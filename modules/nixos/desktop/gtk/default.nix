@@ -7,8 +7,8 @@
       package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
+      name = "Tokyonight-Storm-B";
+      package = pkgs.tokyonight-gtk-theme;
     };
     gtk3.extraConfig = {
       Settings = ''
@@ -21,6 +21,6 @@
       '';
     };
   };
-  home.sessionVariables.GTK_THEME = "Dracula";
+  home.sessionVariables.GTK_THEME = "Tokyonight-Storm-B";
 }
 
