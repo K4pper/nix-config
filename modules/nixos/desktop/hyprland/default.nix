@@ -19,6 +19,8 @@
       kb_layout = "us";
       follow_mouse = 1;
       sensitivity = -0.5;
+      accel_profile = "flat";
+      force_no_accel = true;
     };
     general = {
       gaps_in = 2;
@@ -26,6 +28,12 @@
       border_size = 1;
       layout = "master";
       allow_tearing = false;
+    };
+    master = {
+     allow_small_split = true;
+     orientation = "center";
+     always_center_master = true;
+     mfact = "0.40";
     };
     cursor = {
       inactive_timeout = 3;
@@ -42,11 +50,19 @@
       shadow_range = 4;
       shadow_render_power = 3;
     };
+    misc = {
+      force_default_wallpaper = 0;
+      disable_hyprland_logo = true;
+      mouse_move_enables_dpms = false;
+      key_press_enables_dpms = true;
+    };
     bind = [
       "$mainMod, T, exec, $terminal"
       "$mainMod, Q, exit"
       "ALT, SPACE, exec, $menu"
       "$mainMod, C, killactive"
+      "$mainMod, M, layoutmsg, addmaster"
+      "$mainMod, N, layoutmsg, removemaster"
     ];
     xwayland = {
       force_zero_scaling = true;
