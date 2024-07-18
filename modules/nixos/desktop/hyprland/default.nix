@@ -61,8 +61,14 @@
       "$mainMod, Q, exit"
       "ALT, SPACE, exec, $menu"
       "$mainMod, C, killactive"
-      "$mainMod, M, layoutmsg, addmaster"
-      "$mainMod, N, layoutmsg, removemaster"
+      "$mainMod, 1, workspace, 1"
+      "$mainMod, 2, workspace, 2"
+      "$mainMod, 3, workspace, 3"
+      "$mainMod, 4, workspace, 4"
+      "$mainMod, 5, workspace, 5"
+      "$mainMod, 6, workspace, 6"
+      "$mainMod SHIFT, M, layoutmsg, addmaster"
+      "$mainMod SHIFT, N, layoutmsg, removemaster"
     ];
     xwayland = {
       force_zero_scaling = true;
