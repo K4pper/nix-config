@@ -105,8 +105,6 @@
   firefox
   wofi
   _1password-gui
-  kitty
-  git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -7,8 +7,8 @@
       package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = "tokyonight-gtk-theme_full";
-      package = pkgs.tokyonight-gtk-theme;
+      name = "Tokyonight";
+      package = pkgs.tokyo-night-gtk;
     };
     gtk3.extraConfig = {
       Settings = ''
@@ -21,6 +21,6 @@
       '';
     };
   };
-  home.sessionVariables.GTK_THEME = "tokyonight-gtk-theme_full";
+  home.sessionVariables.GTK_THEME = "Tokyonight";
 }
 
