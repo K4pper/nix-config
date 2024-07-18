@@ -12,8 +12,6 @@
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
   
-  programs.gnome-disks.enable = true;
-
   # rtkit is optional but recommended
   security.rtkit.enable = true;
   services.pipewire = {
