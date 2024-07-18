@@ -104,7 +104,6 @@
   #  wget
   firefox
   wofi
-  _1password-gui
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

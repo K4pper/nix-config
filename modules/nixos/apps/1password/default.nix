@@ -1,4 +1,7 @@
 { pkgs, ... }:
 {
-  programs._1password-gui.enable = true;
-};
+  nixpkgs.config.allowUnfree = true;
+  home.packages = with pkgs; [
+    _1password-gui
+  ];
+}
