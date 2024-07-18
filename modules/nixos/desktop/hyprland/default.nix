@@ -15,7 +15,7 @@
     "$terminal" = "wezterm";
     "$menu" = "wofi --show drun";
     "$lock" = "swaylock";
-    "$file-manager" = "yazi";
+    "$file-manager" = "nemo";
     exec-once = [
       "waybar & swaync"
       "lxqt-policy-agent"
