@@ -9,6 +9,10 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+
+  services.gnome.gnome-keyring.enable = true;
+
   # rtkit is optional but recommended
   security.rtkit.enable = true;
   services.pipewire = {
