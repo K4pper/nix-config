@@ -15,6 +15,7 @@
     "$terminal" = "wezterm";
     "$menu" = "wofi --show drun";
     "$lock" = "swaylock";
+    "$file-manager" = "yazi";
     exec-once = [
       "waybar & swaync"
       "lxqt-policy-agent"
@@ -64,6 +65,7 @@
     bind = [
       "$mainMod, T, exec, $terminal"
       "$mainMod, L, exec, $lock"
+      "$mainMod, E, exec, $file-manager"
       "$mainMod, Q, exit"
       "ALT, SPACE, exec, $menu"
       "$mainMod, C, killactive"
