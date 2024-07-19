@@ -8,7 +8,7 @@
     ./nixos/cli/git
     ./nixos/cli/misc
     ./nixos/cli/yazi
-    ./nixos/apps/wezterm
+    ./nixos/apps/alacritty
     ./nixos/apps/1password
     ./nixos/apps/obsidian
     ./nixos/apps/discord
@@ -18,7 +18,6 @@
     ./nixos/desktop/gtk
     ./nixos/desktop/swaylock
     ./nixos/desktop/swayidle
-    ./nixos/desktop/swaybg
     ./nixos/desktop/nemo
   ];
 }

@@ -12,7 +12,7 @@
       "DP-2, 2560x1440@170, 2560x0, 1"
     ];
     "$mainMod" = "$SUPER";
-    "$terminal" = "wezterm";
+    "$terminal" = "alacritty";
     "$menu" = "wofi --show drun";
     "$lock" = "swaylock";
     "$file-manager" = "nemo";
@@ -30,15 +30,15 @@
     env = [
     ];
     general = {
-      gaps_in = 2;
-      gaps_out = 5;
+      gaps_in = 4;
+      gaps_out = 10;
       border_size = 1;
       layout = "master";
       allow_tearing = false;
     };
     master = {
      allow_small_split = true;
-     orientation = "center";
+     orientation = "left";
      mfact = "0.55";
     };
     cursor = {
@@ -46,7 +46,7 @@
       no_hardware_cursors = true;
     };
     decoration = {
-      rounding = 2;
+      rounding = 5;
       blur = {
         enabled = true;
         size = 3;
@@ -57,8 +57,8 @@
       shadow_render_power = 3;
     };
     misc = {
-      force_default_wallpaper = 0;
-      disable_hyprland_logo = true;
+      force_default_wallpaper = 1;
+      disable_hyprland_logo = false;
       mouse_move_enables_dpms = false;
       key_press_enables_dpms = true;
     };
@@ -105,7 +105,8 @@
 
       "$mainMod SHIFT, M, layoutmsg, addmaster"
       "$mainMod SHIFT, N, layoutmsg, removemaster"
-      "$mainMod SHIFT, left, layoutmsg, orientationleft"
+      "$mainMod SHIFT, down, layoutmsg, orientationcenter"
+      "$mainMod SHIFT, RETURN, layoutmsg, swapwithmaster" 
       "$mainMod, M, fullscreen"
     ];
     xwayland = {
