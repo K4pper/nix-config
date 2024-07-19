@@ -62,27 +62,50 @@
       mouse_move_enables_dpms = false;
       key_press_enables_dpms = true;
     };
+    windowrulev2 = [
+      "fullscreen,class:^steam_app\d+$"
+      "monitor 1,class:^steam_app_\d+$"
+      "workspace 10,class:^steam_app_\d+$"
+    ];
+    workspace = [
+      "10, border:false, rounding:false"
+    ];
     bind = [
+
+      # binds for applications
       "$mainMod, T, exec, $terminal"
-      "$mainMod, L, exec, $lock"
+      "$mainMod SHIFT, L, exec, $lock"
       "$mainMod, E, exec, $file-manager"
       "$mainMod, Q, exit"
       "ALT, SPACE, exec, $menu"
       "$mainMod, C, killactive"
+
+      # Switch focus to workspace
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
       "$mainMod, 3, workspace, 3"
       "$mainMod, 4, workspace, 4"
       "$mainMod, 5, workspace, 5"
       "$mainMod, 6, workspace, 6"
+
+      # Move active window to workspace
       "$mainMod SHIFT, 1, movetoworkspace, 1"
       "$mainMod SHIFT, 2, movetoworkspace, 2"
       "$mainMod SHIFT, 3, movetoworkspace, 3"
       "$mainMod SHIFT, 4, movetoworkspace, 4"
       "$mainMod SHIFT, 5, movetoworkspace, 5"
       "$mainMod SHIFT, 6, movetoworkspace, 6"
+
+      # Move focus to window
+      "$mainMod, H, movefocus, l"
+      "$mainMod, J, movefocus, d"
+      "$mainMod, K, movefocus, u"
+      "$mainMod, L, movefocus, d"
+
+
       "$mainMod SHIFT, M, layoutmsg, addmaster"
       "$mainMod SHIFT, N, layoutmsg, removemaster"
+      "$mainMod SHIFT, left, layoutmsg, orientationleft"
       "$mainMod, M, fullscreen"
     ];
     xwayland = {
