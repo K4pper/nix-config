@@ -9,8 +9,6 @@
       ./hardware-configuration.nix
     ];
 
-  programs.corectrl.enable = true;
-
   # Gamer confirmed
   programs.steam.enable = true;
 
@@ -39,6 +37,8 @@
     ];
   };
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
 
   virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
@@ -61,12 +61,6 @@
 
   boot.initrd.luks.devices."luks-40415a86-9ac7-4218-95c9-945409e739c5".device = "/dev/disk/by-uuid/40415a86-9ac7-4218-95c9-945409e739c5";
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -113,29 +107,11 @@
   firefox
   wofi
   prismlauncher
+  gamescope
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
