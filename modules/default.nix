@@ -8,6 +8,7 @@
     ./nixos/cli/git
     ./nixos/cli/misc
     ./nixos/cli/yazi
+    ./nixos/cli/tmux
     ./nixos/apps/alacritty
     ./nixos/apps/1password
     ./nixos/apps/obsidian

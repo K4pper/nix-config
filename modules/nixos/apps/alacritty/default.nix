@@ -1,6 +1,6 @@
 {...}:
 let
-  config = builtins.readFile ./alacritty.toml:
+  config = builtins.readFile ./alacritty.toml;
 in
 {
   programs.alacritty = {
