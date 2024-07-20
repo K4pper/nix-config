@@ -19,6 +19,7 @@
     exec-once = [
       "waybar & swaync"
       "lxqt-policy-agent"
+      "exec swayidle -w timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 300 '$lock' before-sleep '$lock'"
     ];
     input = {
       kb_layout = "us";
@@ -39,6 +40,7 @@
     master = {
      allow_small_split = true;
      orientation = "left";
+     always_center_master = true;
      mfact = "0.55";
     };
     cursor = {
@@ -112,6 +114,8 @@
       "$mainMod SHIFT, N, layoutmsg, removemaster"
       "$mainMod SHIFT, down, layoutmsg, orientationcenter"
       "$mainMod SHIFT, RETURN, layoutmsg, swapwithmaster" 
+      "$mainMod SHIFT, I, layoutmsg, mfact +0.2"
+      "$mainMod SHIFT, D, layoutmsg, mfact -0.2"
       "$mainMod, M, fullscreen"
     ];
     xwayland = {
