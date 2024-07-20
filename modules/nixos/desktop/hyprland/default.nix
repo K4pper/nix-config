@@ -75,7 +75,7 @@
 
       # binds for applications
       "$mainMod, T, exec, $terminal"
-      "$mainMod SHIFT, L, exec, $lock"
+      "$mainMod SHIFT, ESCAPE, exec, $lock"
       "$mainMod, E, exec, $file-manager"
       "$mainMod, Q, exit"
       "ALT, SPACE, exec, $menu"
@@ -102,6 +102,10 @@
       "$mainMod, J, movefocus, d"
       "$mainMod, K, movefocus, u"
       "$mainMod, L, movefocus, d"
+      "$mainMod SHIFT, H, movewindow, l"
+      "$mainMod SHIFT, J, movewindow, d"
+      "$mainMod SHIFT, K, movewindow, u"
+      "$mainMod SHIFT, L, movewindow, r"
 
 
       "$mainMod SHIFT, M, layoutmsg, addmaster"
