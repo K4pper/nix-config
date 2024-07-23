@@ -7,6 +7,7 @@
     ./bufferline.nix
     ./telescope.nix
     ./lsp.nix
+    ./auto-pair.nix
   ];
 
   programs.nixvim = {

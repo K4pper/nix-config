@@ -6,6 +6,7 @@
 
         servers = {
           nixd.enable = true;
+          
         };
       };
     };
