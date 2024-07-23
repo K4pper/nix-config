@@ -6,6 +6,7 @@
     ./treesitter.nix
     ./bufferline.nix
     ./telescope.nix
+    ./lsp.nix
   ];
 
   programs.nixvim = {
