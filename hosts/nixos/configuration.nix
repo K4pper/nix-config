@@ -39,8 +39,10 @@
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  virtualisation.libvirtd = {
+    enable = true;
+  };
 
-  virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
   programs.virt-manager.enable = true;
 
@@ -92,7 +94,7 @@
   users.users.kapper = {
     isNormalUser = true;
     description = "Kasper Therkelsen";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [];
   };
 
