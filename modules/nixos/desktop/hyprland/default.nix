@@ -103,7 +103,7 @@
       "$mainMod, H, movefocus, l"
       "$mainMod, J, movefocus, d"
       "$mainMod, K, movefocus, u"
-      "$mainMod, L, movefocus, d"
+      "$mainMod, L, movefocus, r"
       "$mainMod SHIFT, H, movewindow, l"
       "$mainMod SHIFT, J, movewindow, d"
       "$mainMod SHIFT, K, movewindow, u"
