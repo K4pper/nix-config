@@ -113,6 +113,8 @@
       "$mainMod SHIFT, M, layoutmsg, addmaster"
       "$mainMod SHIFT, N, layoutmsg, removemaster"
       "$mainMod SHIFT, down, layoutmsg, orientationcenter"
+      "$mainMod SHIFT, left, layoutmsg, orientationleft"
+      "$mainMod SHIFT, right, layoutmsg, orientationright"
       "$mainMod SHIFT, RETURN, layoutmsg, swapwithmaster" 
       "$mainMod SHIFT, I, layoutmsg, mfact +0.2"
       "$mainMod SHIFT, D, layoutmsg, mfact -0.2"
