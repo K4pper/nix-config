@@ -12,5 +12,6 @@
     fd
     eza
     fzf
+    htop
   ];
 }

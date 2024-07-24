@@ -13,6 +13,7 @@
     ./nixos/apps/1password
     ./nixos/apps/obsidian
     ./nixos/apps/discord
+    ./nixos/apps/firefox
     ./nixos/desktop/hyprland
     ./nixos/desktop/waybar
     ./nixos/desktop/swaync
