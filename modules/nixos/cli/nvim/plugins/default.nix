@@ -8,6 +8,7 @@
     ./telescope.nix
     ./lsp.nix
     ./auto-pair.nix
+    ./flash.nix
   ];
 
   programs.nixvim = {
