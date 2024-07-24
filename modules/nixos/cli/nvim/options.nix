@@ -19,6 +19,8 @@
       expandtab = true;
       tabstop = 2;
       foldlevel = 99;
+      list = true;
+      linebreak = true;
     };
   };
 }
