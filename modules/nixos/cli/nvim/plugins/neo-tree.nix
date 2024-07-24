@@ -15,6 +15,11 @@
         width = 30;
         autoExpandWidth = true;
       };
+      filesystem = {
+        followCurrentFile = {
+          enabled = true;
+        };
+      };
     };
   };
 }
