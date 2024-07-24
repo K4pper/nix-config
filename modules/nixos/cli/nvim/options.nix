@@ -15,7 +15,7 @@
       smartcase = true;
       smartindent = true;
       autoindent = true;
-      shiftwidth = 4;
+      shiftwidth = 2;
       termguicolors = true;
       cursorline = true;
       expandtab = true;

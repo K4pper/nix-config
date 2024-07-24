@@ -67,7 +67,7 @@
     };
     windowrulev2 = [
       "fullscreen,class:^steam_app\d+$"
-      "monitor 1,class:^steam_app_\d+$"
+      "monitor 2,class:^steam_app_\d+$"
       "workspace 10,class:^steam_app_\d+$"
     ];
     workspace = [
