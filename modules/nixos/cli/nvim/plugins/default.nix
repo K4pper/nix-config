@@ -8,7 +8,7 @@
     ./telescope.nix
     ./lsp.nix
     ./auto-pair.nix
-    ./indent-blankline.nix
+    ./indent-o-matic.nix
   ];
 
   programs.nixvim = {
