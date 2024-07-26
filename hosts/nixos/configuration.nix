@@ -112,8 +112,6 @@
   lutris
   wine
   winetricks
-  zip
-  unzip
   ];
 
   # Enable Flakes

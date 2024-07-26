@@ -13,5 +13,8 @@
     eza
     fzf
     htop
+    zip
+    unzip
+    gnumake
   ];
 }
