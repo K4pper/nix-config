@@ -16,5 +16,6 @@
     zip
     unzip
     gnumake
+    toybox
   ];
 }
