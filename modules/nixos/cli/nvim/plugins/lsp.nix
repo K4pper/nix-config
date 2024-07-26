@@ -12,6 +12,7 @@
             installRustc = true;
           };
           marksman.enable = true;
+          clangd.enable = true;
         };
       };
     };
