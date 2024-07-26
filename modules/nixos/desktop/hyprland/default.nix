@@ -77,10 +77,10 @@
 
       # binds for applications
       "$mainMod, T, exec, $terminal"
-      "$mainMod SHIFT, ESCAPE, exec, $lock"
+      "$mainMod CTRL, Q, exec, $lock"
       "$mainMod, E, exec, $file-manager"
       "$mainMod, Q, exit"
-      "ALT, SPACE, exec, $menu"
+      "$mainMod, SPACE, exec, $menu"
       "$mainMod, C, killactive"
 
       # Switch focus to workspace
