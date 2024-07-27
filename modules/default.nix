@@ -21,5 +21,6 @@
     ./nixos/desktop/swaylock
     ./nixos/desktop/swayidle
     ./nixos/desktop/nemo
+    ./nixos/desktop/swaybg
   ];
 }
