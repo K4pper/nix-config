@@ -79,9 +79,9 @@
       "$mainMod, T, exec, $terminal"
       "$mainMod CTRL, Q, exec, $lock"
       "$mainMod, E, exec, $file-manager"
-      "$mainMod, Q, exit"
+      "$mainMod, Q, killactive"
       "$mainMod, SPACE, exec, $menu"
-      "$mainMod, C, killactive"
+      "$mainMod, DELETE, exit"
 
       # Switch focus to workspace
       "$mainMod, 1, workspace, 1"
