@@ -22,5 +22,6 @@
     ./nixos/desktop/swayidle
     ./nixos/desktop/nemo
     ./nixos/desktop/swaybg
+    ./nixos/desktop/hyprshot
   ];
 }

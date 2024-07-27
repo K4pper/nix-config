@@ -19,7 +19,7 @@
     exec-once = [
       "waybar & swaync"
       "lxqt-policy-agent"
-      "swaybg --image /home/kapper/Documents/Wallpapers/game-mountain.jpg"
+      "swaybg --image /home/kapper/Documents/Wallpapers/art-wave.jpg"
       "exec swayidle -w timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 300 '$lock' before-sleep '$lock'"
     ];
     input = {
