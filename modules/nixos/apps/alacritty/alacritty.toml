@@ -27,6 +27,7 @@ save_to_clipboard = true
 
 [window]
 title = "Alacritty"
+opacity = 0.8
 
 [colors.primary]
 background = "#24283b"
