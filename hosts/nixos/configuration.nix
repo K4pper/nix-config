@@ -45,6 +45,7 @@
 
   virtualisation.podman.enable = true;
   programs.virt-manager.enable = true;
+  virtualisation.docker.enable = true;
 
   # Set ZSH as default shell
   environment.shells = with pkgs; [ zsh ];
