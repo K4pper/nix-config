@@ -4,6 +4,7 @@
     ./options.nix
     ./plugins
     ./keymappings.nix
+    ./autocommands.nix
   ];
   programs.nixvim = {
     enable = true;
