@@ -19,7 +19,7 @@
     exec-once = [
       "waybar & swaync"
       "lxqt-policy-agent"
-      "swaybg --image /home/kapper/Documents/Wallpapers/art-wave.jpg"
+      "swaybg --image /home/kapper/Documents/Wallpapers/dark-cabin.jpg"
       "exec swayidle -w timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 300 '$lock' before-sleep '$lock'"
     ];
     input = {
@@ -30,6 +30,7 @@
       force_no_accel = true;
     };
     env = [
+    "HYPRSHOT_DIR,$HOME/Documents/Screenshots"
     ];
     general = {
       gaps_in = 4;
@@ -110,7 +111,7 @@
       "$mainMod SHIFT, K, movewindow, u"
       "$mainMod SHIFT, L, movewindow, r"
 
-
+      # Layout config
       "$mainMod SHIFT, M, layoutmsg, addmaster"
       "$mainMod SHIFT, N, layoutmsg, removemaster"
       "$mainMod SHIFT, down, layoutmsg, orientationcenter"
@@ -120,6 +121,9 @@
       "$mainMod SHIFT, I, layoutmsg, mfact +0.2"
       "$mainMod SHIFT, D, layoutmsg, mfact -0.2"
       "$mainMod, M, fullscreen"
+
+      # Screenshot
+      "$mainMod, P, exec, hyprshot -m region"
     ];
     xwayland = {
       force_zero_scaling = true;
