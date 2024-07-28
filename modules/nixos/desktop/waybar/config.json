@@ -4,7 +4,7 @@
         "height": 5, 
         "modules-left": ["hyprland/workspaces", "hyprland/mode", "custom/media"],
         "modules-center": ["hyprland/window"],
-        "modules-right": ["custom/audio_idle_inhibitor", "idle_inhibitor", "pulseaudio", "network", "backlight","cpu","memory","battery", "battery#bat2", "clock", "tray", "custom/notification"],
+        "modules-right": ["custom/audio_idle_inhibitor", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "clock", "tray", "custom/notification"],
         "hyprland/mode": {
             "format": "<span style=\"italic\">{}</span>"
         },
@@ -13,8 +13,8 @@
             "align": 0.5,
             "justify": "center",
             "format-icons": {
-                "activated": "",
-                "deactivated": ""
+                "activated": " ",
+                "deactivated": " "
             }
         },
         "tray": {
@@ -30,29 +30,6 @@
         },
         "memory": {
             "format": "{}% "
-        },
-        "temperature": {
-            "critical-threshold": 80,
-            "format": "{temperatureC}°C {icon}",
-            "format-icons": ["", "", ""]
-        },
-        "backlight": {
-            "format": "{percent}% ",
-            "format-icons": ["", ""]
-        },
-        "battery": {
-            "states": {
-                "good": 95,
-                "warning": 30,
-                "critical": 15
-            },
-            "format": "{capacity}% ",
-            "format-charging": "{capacity}%",
-            "format-plugged": "{capacity}%",
-            "format-alt": "{time} "
-        },
-        "battery#bat2": {
-            "bat": "BAT2"
         },
         "network": {
             "format-wifi": "{essid} ({signalStrength}%) ",
