@@ -17,5 +17,6 @@
     unzip
     gnumake
     xxd
+    gh
   ];
 }

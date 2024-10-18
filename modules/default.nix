@@ -20,7 +20,6 @@
     ./nixos/desktop/gtk
     ./nixos/desktop/swaylock
     ./nixos/desktop/swayidle
-    ./nixos/desktop/nemo
     ./nixos/desktop/swaybg
     ./nixos/desktop/hyprshot
   ];

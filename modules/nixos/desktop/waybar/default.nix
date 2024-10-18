@@ -1,6 +1,6 @@
 {...}:
 let
-  settings = builtins.readFile ./config.json;
+  settings = builtins.readFile ./config.jsonc;
 in
 {
   programs.waybar = {

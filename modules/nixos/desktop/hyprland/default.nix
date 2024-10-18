@@ -8,14 +8,11 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     monitor = [
-      "DP-1, 2560x1440@170, 0x0, 1"
-      "DP-2, 2560x1440@170, 2560x0, 1"
     ];
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty";
     "$menu" = "wofi --show drun";
     "$lock" = "swaylock";
-    "$file-manager" = "nemo";
     exec-once = [
       "waybar & swaync"
       "lxqt-policy-agent"

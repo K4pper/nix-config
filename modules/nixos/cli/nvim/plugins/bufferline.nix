@@ -2,8 +2,12 @@
   programs.nixvim = {
     plugins.bufferline = {
       enable = true;
-      alwaysShowBufferline = true;
-      colorIcons = true;
+      settings = {
+        options = {
+          always_show_bufferline = true;
+          color_icons = true;
+        };
+      };
     };
   };
 }

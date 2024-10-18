@@ -8,14 +8,12 @@
     ./telescope.nix
     ./lsp.nix
     ./auto-pair.nix
+    ./web-devicons.nix
   ];
 
   programs.nixvim = {
-    colorschemes.tokyonight = {
+    colorschemes.dracula = {
       enable = true;
-      settings = {
-        transparent = true;
-      };
     };
   };
 }

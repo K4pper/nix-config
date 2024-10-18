@@ -9,9 +9,6 @@
       ./hardware-configuration.nix
     ];
 
-  # Gamer confirmed
-  programs.steam.enable = true;
-
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
   
@@ -62,7 +59,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-40415a86-9ac7-4218-95c9-945409e739c5".device = "/dev/disk/by-uuid/40415a86-9ac7-4218-95c9-945409e739c5";
   networking.hostName = "nixos"; # Define your hostname.
   # Enable networking
   networking.networkmanager.enable = true;
@@ -107,11 +103,7 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-  prismlauncher
-  gamescope
-  lutris
-  wine
-  winetricks
+    git
   ];
 
   # Enable Flakes
