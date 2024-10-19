@@ -23,8 +23,7 @@
 
   # Screensharing and stuff + portal for gnome-keyring
   xdg.portal = {
-    enable = true;
-    wlr.enable = true;
+    enable = true; wlr.enable = true;
     extraPortals = with pkgs; [ 
       xdg-desktop-portal
       xdg-desktop-portal-gtk 
@@ -91,7 +90,6 @@
     isNormalUser = true;
     description = "Kasper Therkelsen";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    packages = with pkgs; [];
   };
 
   # Allow unfree packages
@@ -100,10 +98,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-    git
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    qt5.full
+    qt6.full
     nwg-look
   ];
 
