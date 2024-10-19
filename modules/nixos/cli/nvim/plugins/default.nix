@@ -12,7 +12,7 @@
   ];
 
   programs.nixvim = {
-    colorschemes.dracula = {
+    colorschemes.rose-pine= {
       enable = true;
     };
   };

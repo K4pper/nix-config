@@ -6,12 +6,12 @@
       #   package = pkgs.dracula-icon-theme;
       # };
       iconTheme = { 
-        name = "Papirus-Dark";
-        package = pkgs.papirus-icon-theme;
+        name = "rose-pine";
+        package = pkgs.rose-pine-icon-theme;
       };
       theme = {
-        name = "Dracula";
-        package = pkgs.dracula-theme;
+        name = "rose-pine-gtk-theme";
+        package = pkgs.rose-pine-gtk-theme;
       };
       gtk3.extraConfig = {
         Settings = ''
@@ -23,6 +23,13 @@
           gtk-application-prefer-dark-theme=1
         '';
       };
+      cursorTheme = {
+        name = "rose-pine-cursor";
+        package = pkgs.rose-pine-cursor;
+      };
     };
-    home.sessionVariables.GTK_THEME = "Dracula";
+    home.sessionVariables = {
+     XCURSOR_THEME = "BreezeX-RoséPine";
+     GTK_THEME = "rose-pine";
+    };
 }

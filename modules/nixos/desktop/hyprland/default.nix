@@ -28,6 +28,7 @@
     };
     env = [
     "HYPRSHOT_DIR,$HOME/Documents/Screenshots"
+    "HYPRCURSOR_THEME,rose-pine-hyprcursor"
     ];
     general = {
       gaps_in = 4;

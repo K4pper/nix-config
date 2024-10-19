@@ -1,6 +1,6 @@
 {
 
-  description = "My nixos flake";
+  description = "My nix flake";
 
   inputs = {
     # Nix knows where nixpkgs are, therefore the full github URI is not needed
@@ -9,9 +9,10 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }: 
+  outputs = inputs @ { nixpkgs, home-manager, nixvim, ... }: 
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -27,6 +28,7 @@
 
       nixos = lib.nixosSystem {
           inherit system;
+          specialArgs = { inherit inputs; };
           modules = [
             ./hosts/nixos/configuration.nix
             ];
