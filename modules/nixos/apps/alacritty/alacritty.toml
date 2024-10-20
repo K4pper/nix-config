@@ -25,6 +25,10 @@ style = "Italix"
 [selection]
 save_to_clipboard = true
 
+[cursor]
+style.shape = "Beam"
+style.blinking = "Off"
+
 [window]
 title = "Alacritty"
 

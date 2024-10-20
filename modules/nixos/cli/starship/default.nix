@@ -1,6 +1,6 @@
 {lib, ...}:
 let
-  config = builtins.readFile ./starship.toml
+  config = builtins.readFile ./starship.toml;
 in
 {
   programs.starship = {
