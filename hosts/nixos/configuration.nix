@@ -8,10 +8,7 @@
       ./hardware-configuration.nix
     ];
 
-  services.udisks2.enable = true;
-  services.gnome.gnome-keyring.enable = true;
-  
-  # rtkit is optional but recommended
+  # pipewire and other sound config
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -32,17 +29,13 @@
     ];
   };
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  virtualisation.libvirtd = {
-    enable = true;
-  };
-
+  # Virtualisation
+  virtualisation.libvirtd.enable = true;
   virtualisation.podman.enable = true;
   programs.virt-manager.enable = true;
-  virtualisation.docker.enable = true;
 
-  # Set ZSH as default shell
+  # Shell
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
@@ -52,13 +45,15 @@
     enable = true;
     xwayland.enable = true;
   };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Networking
   networking.hostName = "nixos"; # Define your hostname.
-  # Enable networking
   networking.networkmanager.enable = true;
 
   # Set your time zone.
@@ -95,13 +90,16 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable services
+  services.udisks2.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+
+
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
-    qt5.full
-    qt6.full
-    nwg-look
   ];
 
   # Enable Flakes
@@ -114,5 +112,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

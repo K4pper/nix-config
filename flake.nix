@@ -15,19 +15,12 @@
   outputs = inputs @ { nixpkgs, home-manager, nixvim, ... }: 
   let
     lib = nixpkgs.lib;
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in {
     nixosConfigurations = {
-      nixos-vm = lib.nixosSystem {
-        inherit system;
-	      modules = [
-            ./hosts/nixos-vm/configuration.nix
-          ];
-      };
 
       nixos = lib.nixosSystem {
-          inherit system;
+          system = "x86-64-linux";
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/nixos/configuration.nix
@@ -39,12 +32,11 @@
         kapper = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./home.nix
+            hosts/nixos/home.nix
             nixvim.homeManagerModules.nixvim
             ./modules
           ];
         };
       };
-  };
-
+    };
 }
