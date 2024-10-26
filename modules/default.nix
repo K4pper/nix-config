@@ -18,7 +18,7 @@
     ./nixos/desktop/waybar
     ./nixos/desktop/swaync
     ./nixos/desktop/gtk
-    ./nixos/desktop/swaylock
+    ./nixos/desktop/hyprlock
     ./nixos/desktop/swayidle
     ./nixos/desktop/swaybg
     ./nixos/desktop/hyprshot

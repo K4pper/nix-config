@@ -13,7 +13,7 @@
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty";
     "$menu" = "wofi --show drun";
-    "$lock" = "swaylock";
+    "$lock" = "hyprlock";
     exec-once = [
       "waybar & swaync"
       "lxqt-policy-agent"
