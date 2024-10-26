@@ -9,7 +9,6 @@
     ./lsp.nix
     ./auto-pair.nix
     ./web-devicons.nix
-    ./nix.nix
   ];
 
   programs.nixvim = {
