@@ -121,7 +121,7 @@
       "$mainMod, M, fullscreen"
 
       # Screenshot
-      "$mainMod, P, exec, hyprshot -m region"
+      "$mainMod, P, exec, hyprshot -m region --clipboard-only"
     ];
     xwayland = {
       force_zero_scaling = true;
