@@ -45,7 +45,7 @@
     };
     cursor = {
       inactive_timeout = 3;
-      no_hardware_cursors = true;
+      no_hardware_cursors = 2;
     };
     decoration = {
       rounding = 5;
