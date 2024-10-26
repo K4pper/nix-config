@@ -33,8 +33,7 @@
     general = {
       gaps_in = 4;
       gaps_out = 10;
-      border_size = 1;
-      layout = "master";
+      border_size = 1; layout = "master";
       allow_tearing = false;
     };
     master = {
@@ -116,8 +115,8 @@
       "$mainMod SHIFT, left, layoutmsg, orientationleft"
       "$mainMod SHIFT, right, layoutmsg, orientationright"
       "$mainMod SHIFT, RETURN, layoutmsg, swapwithmaster" 
-      "$mainMod SHIFT, I, layoutmsg, mfact +0.2"
-      "$mainMod SHIFT, D, layoutmsg, mfact -0.2"
+      "$mainMod SHIFT, <, layoutmsg, mfact +0.2"
+      "$mainMod SHIFT, >, layoutmsg, mfact -0.2"
       "$mainMod, M, fullscreen"
 
       # Screenshot
