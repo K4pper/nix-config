@@ -8,6 +8,13 @@
       ./hardware-configuration.nix
     ];
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  services.xserver.videoDrivers = ["amdgpu"];
+
   # pipewire and other sound config
   security.rtkit.enable = true;
   services.pipewire = {
@@ -23,7 +30,7 @@
     enable = true; wlr.enable = true;
     extraPortals = with pkgs; [ 
       xdg-desktop-portal
-      xdg-desktop-portal-gtk 
+      xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
       xdg-desktop-portal-wlr
     ];
@@ -47,6 +54,13 @@
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # Gaming
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+  };
+  programs.gamemode.enable = true;
+  environment.sessionVariables.STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/kapper/.steam/root/compatibilitytools.d";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -100,6 +114,8 @@
   # $ nix search wget
   environment.systemPackages = [
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    pkgs.protonup
+    pkgs.mangohud
   ];
 
   # Enable Flakes
