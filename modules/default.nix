@@ -10,7 +10,6 @@
     ./nixos/cli/yazi
     ./nixos/cli/tmux
     ./nixos/apps/alacritty
-    ./nixos/apps/1password
     ./nixos/apps/obsidian
     ./nixos/apps/discord
     ./nixos/apps/firefox
