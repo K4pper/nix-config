@@ -14,6 +14,7 @@
     ./nixos/apps/obsidian
     ./nixos/apps/discord
     ./nixos/apps/firefox
+    ./nixos/apps/prismlauncher
     ./nixos/desktop/hyprland
     ./nixos/desktop/waybar
     ./nixos/desktop/swaync
