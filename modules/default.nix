@@ -21,5 +21,6 @@
     ./nixos/desktop/swayidle
     ./nixos/desktop/swaybg
     ./nixos/desktop/hyprshot
+    ./nixos/desktop/blueberry
   ];
 }

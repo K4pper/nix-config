@@ -1,8 +1,6 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { pkgs, inputs, ... }:
-
 { imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -26,8 +24,7 @@
   };
 
  programs._1password.enable = true;
-  programs._1password-gui = {
-    enable = true;
+  programs._1password-gui = { enable = true;
     # Certain features, including CLI integration and system authentication support,
     # require enabling PolKit integration on some desktop environments (e.g. Plasma).
     polkitPolicyOwners = [ "kapper" ];
@@ -116,6 +113,14 @@
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth.settings = {
+    General = {
+      Enable = "Source,Sink,Media,Socket";
+    };
+  };
+
 
 
   # List packages installed in system profile. To search, run:
@@ -128,6 +133,9 @@
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
