@@ -9,6 +9,7 @@
     ./nixos/cli/misc
     ./nixos/cli/yazi
     ./nixos/cli/tmux
+    ./nixos/cli/ssh
     ./nixos/apps/alacritty
     ./nixos/apps/obsidian
     ./nixos/apps/discord
