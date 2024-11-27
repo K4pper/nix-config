@@ -8,15 +8,16 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     monitor = [
+      "DP-2, 5120x1440@240, 0x0, 1"
     ];
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty";
     "$menu" = "wofi --show drun";
-    "$lock" = "swaylock";
+    "$lock" = "hyprlock";
     exec-once = [
       "waybar & swaync"
       "lxqt-policy-agent"
-      "swaybg --image /home/kapper/Documents/Wallpapers/dark-cabin.jpg"
+      "swaybg --image /home/kapper/Documents/Wallpapers/UltraWideWallpaper.jpg"
       "exec swayidle -w timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 300 '$lock' before-sleep '$lock'"
     ];
     input = {
@@ -33,8 +34,7 @@
     general = {
       gaps_in = 4;
       gaps_out = 10;
-      border_size = 1;
-      layout = "master";
+      border_size = 1; layout = "master";
       allow_tearing = false;
     };
     master = {
@@ -45,7 +45,7 @@
     };
     cursor = {
       inactive_timeout = 3;
-      no_hardware_cursors = true;
+      no_hardware_cursors = 2;
     };
     decoration = {
       rounding = 5;
@@ -54,9 +54,11 @@
         size = 3;
         passes = 1;
       };
-      drop_shadow = "yes";
-      shadow_range = 4;
-      shadow_render_power = 3;
+      shadow = {
+        enabled = true;
+        range = 4;
+        render_power = 3;
+      };
     };
     misc = {
       force_default_wallpaper = 0;
@@ -110,18 +112,18 @@
       "$mainMod SHIFT, L, movewindow, r"
 
       # Layout config
-      "$mainMod SHIFT, M, layoutmsg, addmaster"
-      "$mainMod SHIFT, N, layoutmsg, removemaster"
+      "$mainMod CTRL, comma, layoutmsg, addmaster"
+      "$mainMod CTRL, period, layoutmsg, removemaster"
       "$mainMod SHIFT, down, layoutmsg, orientationcenter"
       "$mainMod SHIFT, left, layoutmsg, orientationleft"
       "$mainMod SHIFT, right, layoutmsg, orientationright"
       "$mainMod SHIFT, RETURN, layoutmsg, swapwithmaster" 
-      "$mainMod SHIFT, I, layoutmsg, mfact +0.2"
-      "$mainMod SHIFT, D, layoutmsg, mfact -0.2"
+      "$mainMod SHIFT, period, layoutmsg, mfact +0.1"
+      "$mainMod SHIFT, comma, layoutmsg, mfact -0.1"
       "$mainMod, M, fullscreen"
 
       # Screenshot
-      "$mainMod, P, exec, hyprshot -m region"
+      "$mainMod, P, exec, hyprshot -m region --clipboard-only"
     ];
     xwayland = {
       force_zero_scaling = true;

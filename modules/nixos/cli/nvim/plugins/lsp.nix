@@ -12,6 +12,9 @@
           };
           marksman.enable = true;
           clangd.enable = true;
+          nixd = {
+            enable = true;
+          };
         };
       };
     };

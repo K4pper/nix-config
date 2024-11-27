@@ -1,12 +1,17 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { pkgs, inputs, ... }:
-
 { imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  services.xserver.videoDrivers = ["amdgpu"];
 
   # pipewire and other sound config
   security.rtkit.enable = true;
@@ -18,12 +23,19 @@
     jack.enable = true;
   };
 
+ programs._1password.enable = true;
+  programs._1password-gui = { enable = true;
+    # Certain features, including CLI integration and system authentication support,
+    # require enabling PolKit integration on some desktop environments (e.g. Plasma).
+    polkitPolicyOwners = [ "kapper" ];
+  };
+
   # Screensharing and stuff + portal for gnome-keyring
   xdg.portal = {
     enable = true; wlr.enable = true;
     extraPortals = with pkgs; [ 
       xdg-desktop-portal
-      xdg-desktop-portal-gtk 
+      xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
       xdg-desktop-portal-wlr
     ];
@@ -47,6 +59,13 @@
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # Gaming
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+  };
+  programs.gamemode.enable = true;
+  environment.sessionVariables.STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/kapper/.steam/root/compatibilitytools.d";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -94,16 +113,29 @@
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth.settings = {
+    General = {
+      Enable = "Source,Sink,Media,Socket";
+    };
+  };
+
 
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = [
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    pkgs.protonup
+    pkgs.mangohud
   ];
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
