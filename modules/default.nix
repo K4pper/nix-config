@@ -24,5 +24,6 @@
     ./nixos/desktop/swaybg
     ./nixos/desktop/hyprshot
     ./nixos/desktop/blueberry
+    ./nixos/desktop/fonts
   ];
 }
