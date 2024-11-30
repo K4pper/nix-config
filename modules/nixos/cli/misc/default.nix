@@ -8,7 +8,7 @@
     nodejs_22
     bat
     lazygit
-    nerdfonts
+    nerd-fonts.jetbrains-mono
     fd
     eza
     fzf
