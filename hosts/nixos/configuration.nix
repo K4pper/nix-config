@@ -6,11 +6,11 @@
       ./hardware-configuration.nix
     ];
 
+  # Graphics
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
-
   services.xserver.videoDrivers = ["amdgpu"];
 
   # pipewire and other sound config
@@ -23,6 +23,7 @@
     jack.enable = true;
   };
 
+  # 1Password
  programs._1password.enable = true;
   programs._1password-gui = { enable = true;
     # Certain features, including CLI integration and system authentication support,
