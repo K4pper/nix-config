@@ -122,10 +122,6 @@
     };
   };
 
-
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = [
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     pkgs.protonup
@@ -137,6 +133,23 @@
 
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # Mounting disks
+  fileSystems."/mnt/ssd" =
+  { device = "/dev/disk/by-uuid/a0c0dec5-190d-4b60-9611-de1e32a71cd7";
+      fsType = "ext4";
+      options = [
+        "nofail"
+      ];
+  };
+
+  # Swap
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 32*1024;
+    }
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
