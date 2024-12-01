@@ -67,11 +67,6 @@
       mouse_move_enables_dpms = false;
       key_press_enables_dpms = true;
     };
-    windowrulev2 = [
-      "fullscreen,class:^steam_app\d+$"
-      "monitor 2,class:^steam_app_\d+$"
-      "workspace 10,class:^steam_app_\d+$"
-    ];
     workspace = [
       "10, border:false, rounding:false"
     ];
