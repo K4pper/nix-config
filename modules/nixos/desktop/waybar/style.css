@@ -1,6 +1,7 @@
-* { 
+@import "./rose-pine.css";
+* {
     all: unset;
-    border: none;
+    border: 1px solid @overlay;
     border-radius: 4;
     font-family: JetBrains Mono;
     font-size: 13px;
@@ -8,7 +9,7 @@
 }
 
 window#waybar {
-    background: shade(alpha(@borders, 0.8), 1.25);
+    background: @base;
     border-bottom: 1px solid @unfocused_borders;
     color: @theme_text_color;
     transition-property: background-color;
