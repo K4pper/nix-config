@@ -55,6 +55,7 @@ symbol = ""
 style = "bg:overlay fg:love"
 format = '[](fg:overlay)[$all_status$ahead_behind]($style)[](fg:overlay)'
 disabled = false
+up_to_date = "✓"
 
 [username]
 disabled = false
