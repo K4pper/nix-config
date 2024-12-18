@@ -10,6 +10,9 @@
     syntaxHighlighting.enable = true;
     enableCompletion = true;
     dotDir = ".config/zsh";
+    localVariables = {
+      SSH_AUTH_SOCK = "~/.1password/agent.sock";
+    };
     completionInit = ''
       autoload -Uz compinit && 
       zstyle ':completion:*' menu select && 
