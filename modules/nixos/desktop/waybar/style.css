@@ -1,17 +1,16 @@
 @import "./rose-pine.css";
 * {
-    font-family: JetBrains Mono;
-    font-size: 14px;
+    background: none;
     border: none;
     border-radius: 0;
+    font-family: "JetBrains Mono";
+    font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(21, 18, 27, 0);
     color: @text;
-    transition-duration: .5s;
-    border-radius: 0;
+    background: @surface;
 }
 
 tooltip {
@@ -22,55 +21,71 @@ tooltip {
   border-color: @overlay;
 }
 
-tooltip label {
-  color: @theme_text_color;
-}
-
 #workspaces button {
-    padding: 5px;
-    color: @highlightMed;
-    margin-right: 5px;
+  padding: 5px;
+  color: @highlightMed;
+  margin-right: 5px;
 }
 
 #workspaces button.active {
-    color: @text;
+  color: @rose;
 }
 
 #workspaces button.focused {
-    color: @subtle;
-    background: @love;
-    border-radius: 8px;
+  color: @subtle;
+  background: @love;
+  border-radius: 8px;
 }
 
 #workspaces button.urgent {
+  color: @base;
+  background: @pine;
+  border-radius: 8px;
 }
 
-#clock,
-#cpu,
-#memory,
-#network,
-#pulseaudio,
-#tray,
-#mode,
-#idle_inhibitor,
-#custom-notification {
-    margin: 6px 3px;
-    padding: 0 10px;
-  
+#workspaces button:hover {
+  background: @highlightLow;
+  color: @text;
+  border-radius: 8px;
 }
 
 #window,
+#clock,
+#pulseaudio,
+#network,
+#workspaces,
+#cpu,
+#memory {
+    background: @base;
+    padding: 0px 10px;
+    margin: 2px 2px;
+    border-radius: 8px;
+}
+
 #workspaces {
-    margin: 6px 3px;
-    padding: 0 10px;
+    padding: 0px 0px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+#window {
+    color: @love;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+#pulseaudio {
+    color: @foam;
+}
+
+#network {
+    color: @love;
+}
+
+#cpu {
+    color: @iris;
+}
+
+#memory {
+    color: @gold;
+}
+
+#clock {
+    color: @text
 }
