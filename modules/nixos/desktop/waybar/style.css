@@ -1,20 +1,25 @@
 @import "./rose-pine.css";
 * {
-    all: unset;
     font-family: JetBrains Mono;
-    font-size: 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 0;
     min-height: 0;
 }
 
 window#waybar {
-    color: @pine;
+    background: rgba(21, 18, 27, 0);
+    color: @text;
     transition-duration: .5s;
     border-radius: 0;
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
+  background: @base;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: @overlay;
 }
 
 tooltip label {
@@ -22,16 +27,22 @@ tooltip label {
 }
 
 #workspaces button {
-    padding: 0 0.7em;
-    color: @rose;
+    padding: 5px;
+    color: @highlightMed;
+    margin-right: 5px;
 }
 
 #workspaces button.active {
-    background-color: @iris;
+    color: @text;
+}
+
+#workspaces button.focused {
+    color: @subtle;
+    background: @love;
+    border-radius: 8px;
 }
 
 #workspaces button.urgent {
-    background-color: @iris;
 }
 
 #clock,
