@@ -65,6 +65,7 @@
     enable = true;
     gamescopeSession.enable = true;
   };
+
   programs.gamemode.enable = true;
   environment.sessionVariables.STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/kapper/.steam/root/compatibilitytools.d";
 
@@ -126,6 +127,7 @@
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     pkgs.protonup
     pkgs.mangohud
+    pkgs.lutris
   ];
 
   # Enable Flakes

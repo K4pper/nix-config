@@ -115,10 +115,14 @@
       "$mainMod SHIFT, RETURN, layoutmsg, swapwithmaster" 
       "$mainMod SHIFT, period, layoutmsg, mfact +0.1"
       "$mainMod SHIFT, comma, layoutmsg, mfact -0.1"
-      "$mainMod, M, fullscreen"
+      "$mainMod ALT, F, togglefloating"
+      "$mainMod ALT, C, centerwindow"
 
       # Screenshot
       "$mainMod, P, exec, hyprshot -m region --clipboard-only"
+
+      # Mouse binds
+      "ALT, mouse:272, movewindow"
     ];
     xwayland = {
       force_zero_scaling = true;
