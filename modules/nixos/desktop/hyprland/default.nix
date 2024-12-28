@@ -18,7 +18,7 @@
       "waybar & swaync"
       "lxqt-policy-agent"
       "swaybg --image /home/kapper/Documents/Wallpapers/UltraWideWallpaper.jpg"
-      "exec swayidle -w timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 300 '$lock' before-sleep '$lock'"
+      "exec swayidle -w timeout 999 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 999 '$lock' before-sleep '$lock'"
     ];
     input = {
       kb_layout = "us";
@@ -115,6 +115,7 @@
       "$mainMod SHIFT, RETURN, layoutmsg, swapwithmaster" 
       "$mainMod SHIFT, period, layoutmsg, mfact +0.1"
       "$mainMod SHIFT, comma, layoutmsg, mfact -0.1"
+      "$mainMod SHIFT, F, fullscreen"
       "$mainMod ALT, F, togglefloating"
       "$mainMod ALT, C, centerwindow"
 
