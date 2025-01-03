@@ -23,6 +23,13 @@
     jack.enable = true;
   };
 
+  # 1Password
+ programs._1password.enable = true;
+ programs._1password-gui = {
+    enable = true;
+    polkitPolicyOwners = [ "kapper" ];
+    };
+
   # Screensharing and stuff + portal for gnome-keyring
   xdg.portal = {
     enable = true; wlr.enable = true;
