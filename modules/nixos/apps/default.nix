@@ -6,5 +6,6 @@
     ./firefox
     ./obsidian
     ./prismlauncher
+    ./1password
   ];
 }
