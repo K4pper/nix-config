@@ -4,7 +4,6 @@
     ./alacritty
     ./discord
     ./firefox
-    ./obsidian
     ./prismlauncher
   ];
 }
