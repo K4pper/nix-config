@@ -6,11 +6,11 @@
       ./hardware-configuration.nix
     ];
 
+  # Graphics
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
-
   services.xserver.videoDrivers = ["amdgpu"];
 
   # pipewire and other sound config
@@ -23,12 +23,12 @@
     jack.enable = true;
   };
 
+  # 1Password
  programs._1password.enable = true;
-  programs._1password-gui = { enable = true;
-    # Certain features, including CLI integration and system authentication support,
-    # require enabling PolKit integration on some desktop environments (e.g. Plasma).
+ programs._1password-gui = {
+    enable = true;
     polkitPolicyOwners = [ "kapper" ];
-  };
+    };
 
   # Screensharing and stuff + portal for gnome-keyring
   xdg.portal = {
@@ -64,6 +64,7 @@
     enable = true;
     gamescopeSession.enable = true;
   };
+
   programs.gamemode.enable = true;
   environment.sessionVariables.STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/kapper/.steam/root/compatibilitytools.d";
 
@@ -121,14 +122,11 @@
     };
   };
 
-
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = [
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     pkgs.protonup
     pkgs.mangohud
+    pkgs.lutris
   ];
 
   # Enable Flakes
@@ -136,6 +134,23 @@
 
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # Mounting disks
+  fileSystems."/mnt/ssd" =
+  { device = "/dev/disk/by-uuid/a0c0dec5-190d-4b60-9611-de1e32a71cd7";
+      fsType = "ext4";
+      options = [
+        "nofail"
+      ];
+  };
+
+  # Swap
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 32*1024;
+    }
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

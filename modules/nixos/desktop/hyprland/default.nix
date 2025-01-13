@@ -18,7 +18,7 @@
       "waybar & swaync"
       "lxqt-policy-agent"
       "swaybg --image /home/kapper/Documents/Wallpapers/UltraWideWallpaper.jpg"
-      "exec swayidle -w timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 300 '$lock' before-sleep '$lock'"
+      "exec swayidle -w timeout 999 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 999 '$lock' before-sleep '$lock'"
     ];
     input = {
       kb_layout = "us";
@@ -67,11 +67,6 @@
       mouse_move_enables_dpms = false;
       key_press_enables_dpms = true;
     };
-    windowrulev2 = [
-      "fullscreen,class:^steam_app\d+$"
-      "monitor 2,class:^steam_app_\d+$"
-      "workspace 10,class:^steam_app_\d+$"
-    ];
     workspace = [
       "10, border:false, rounding:false"
     ];
@@ -120,10 +115,15 @@
       "$mainMod SHIFT, RETURN, layoutmsg, swapwithmaster" 
       "$mainMod SHIFT, period, layoutmsg, mfact +0.1"
       "$mainMod SHIFT, comma, layoutmsg, mfact -0.1"
-      "$mainMod, M, fullscreen"
+      "$mainMod SHIFT, F, fullscreen"
+      "$mainMod ALT, F, togglefloating"
+      "$mainMod ALT, C, centerwindow"
 
       # Screenshot
       "$mainMod, P, exec, hyprshot -m region --clipboard-only"
+
+      # Mouse binds
+      "ALT, mouse:272, movewindow"
     ];
     xwayland = {
       force_zero_scaling = true;
