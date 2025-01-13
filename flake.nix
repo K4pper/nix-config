@@ -26,15 +26,29 @@
             ./hosts/nixos/configuration.nix
             ];
         };
+      t14 = lib.nixosSystem {
+          system = "x86-64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/t14/configuration.nix
+          ];
+        };
     };
 
     homeConfigurations = {
         kapper = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            hosts/nixos/home.nix
+            ./hosts/nixos/home.nix
             nixvim.homeManagerModules.nixvim
             ./modules
+          ];
+        };
+        kath = home-manager.lib.homeManagerConfiguration {
+            inherit pkgs;
+            modules = [
+              ./hosts/t14/home.nix
+              nixvim.homeManagerModules.nixvim
           ];
         };
       };
