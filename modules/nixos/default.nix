@@ -10,7 +10,7 @@
     config = {
         # Enable ZSH
         environment.shells = with pkgs; [ zsh ];
-        users.defaultShell = pkgs.zsh;
+        users.defaultUserShell = pkgs.zsh;
         programs.zsh.enable = true;
 
         programs.git.enable = true;
