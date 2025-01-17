@@ -38,6 +38,14 @@
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+    # Bluetooth
+    hardware.bluetooth = {
+        enable = true;
+        powerOnBoot = true;
+    };
+    services.blueman.enable = true;
+
+
   # Swap
   swapDevices = [
     {
