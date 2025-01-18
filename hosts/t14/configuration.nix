@@ -56,6 +56,18 @@
     }
   ];
 
+    # UWSM
+    programs.uwsm = {
+        enable = true;
+        waylandCompositors = {
+            hyprland = {
+                prettyName = "Hyprland";
+                comment = "Hyprland compositor managed by UWSM";
+                binPath = "/home/kath/.nix-profile/bin/Hyprland";
+            };
+        };
+    };
+
     # Enable Desktop Module
     desktop.enable = true;
 

@@ -61,6 +61,18 @@
     }
   ];
 
+    # UWSM
+    programs.uwsm = {
+        enable = true;
+        waylandCompositors = {
+            hyprland = {
+                prettyName = "Hyprland";
+                comment = "Hyprland compositor managed by UWSM";
+                binPath = "/home/kath/.nix-profile/bin/Hyprland";
+            };
+        };
+    };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

@@ -8,29 +8,25 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     monitor = [
-      "DP-2, 5120x1440@240, 0x0, 1"
+      "eDP-1, 1920x1200@60, 0x0, 1"
     ];
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty";
-    "$menu" = "wofi --show drun";
+    "$menu" = "uwsm app -- $(wofi --show drun --define=drun-print_desktop_file=true)";
     "$lock" = "hyprlock";
     exec-once = [
-      "waybar & swaync"
-      "lxqt-policy-agent"
-      "swaybg --image /home/kapper/Documents/Wallpapers/UltraWideWallpaper.jpg"
-      "exec swayidle -w timeout 999 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 999 '$lock' before-sleep '$lock'"
+      "uwsm app -- swaync"
+      "uwsm app -- lxqt-policy-agent"
+      "uwsm app -- swayidle -w timeout 999 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 999 '$lock' before-sleep '$lock'"
     ];
     input = {
       kb_layout = "us";
+      kb_variant = "altgr-intl";
       follow_mouse = 1;
       sensitivity = -0.5;
       accel_profile = "flat";
       force_no_accel = true;
     };
-    env = [
-    "HYPRSHOT_DIR,$HOME/Documents/Screenshots"
-    "HYPRCURSOR_THEME,rose-pine-hyprcursor"
-    ];
     general = {
       gaps_in = 4;
       gaps_out = 10;
@@ -73,12 +69,11 @@
     bind = [
 
       # binds for applications
-      "$mainMod, T, exec, $terminal"
-      "$mainMod CTRL, Q, exec, $lock"
-      "$mainMod, E, exec, $file-manager"
+      "$mainMod, T, exec, uwsm app -- $terminal"
+      "$mainMod CTRL, Q, exec, uwsm app -- $lock"
       "$mainMod, Q, killactive"
       "$mainMod, SPACE, exec, $menu"
-      "$mainMod, DELETE, exit"
+      "$mainMod, DELETE, exec, uwsm stop"
 
       # Switch focus to workspace
       "$mainMod, 1, workspace, 1"

@@ -13,6 +13,11 @@
         users.defaultUserShell = pkgs.zsh;
         programs.zsh.enable = true;
 
+        # Git
         programs.git.enable = true;
+
+        # DBUS
+        services.dbus.implementation = "broker";
+
     };
 }

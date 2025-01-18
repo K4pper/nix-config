@@ -1,0 +1,2 @@
+export HYPRSHOT_DIR=$HOME/Documents/Screenshots
+export HYPRCURSOR_THEME=rose-pine-hyprcursor
