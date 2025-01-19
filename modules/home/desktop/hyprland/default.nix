@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     lxqt.lxqt-policykit
-    walker
+    wofi
   ];
 
   wayland.windowManager.hyprland.enable = true;
@@ -12,7 +12,7 @@
     ];
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty";
-    "$menu" = "walker";
+    "$menu" = "uwsm app -- $(wofi --show drun --define=drun-print_desktop_file=true)";
     "$lock" = "hyprlock";
     exec-once = [
       "uwsm app -- swaync"
@@ -24,8 +24,7 @@
       kb_variant = "altgr-intl";
       follow_mouse = 1;
       sensitivity = -0.5;
-      accel_profile = "flat";
-      force_no_accel = true;
+      accel_profile = "adaptive";
     };
     general = {
       gaps_in = 4;

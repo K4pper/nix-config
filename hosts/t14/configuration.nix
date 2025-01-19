@@ -1,6 +1,6 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page and in the NixOS manual (accessible by running ‘nixos-help’).
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 { imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -21,6 +21,7 @@
     description = "Kasper Therkelsen";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

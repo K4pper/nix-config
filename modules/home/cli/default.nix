@@ -10,5 +10,6 @@
     ./yazi
     ./zoxide
     ./zsh
+    ./az-cli
   ];
 }

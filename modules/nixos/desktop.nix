@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 {
     options = {
@@ -20,6 +20,9 @@
         services.udisks2.enable = false;
         services.gnome.gnome-keyring.enable = true;
 
+        environment.systemPackages = [
+          inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+        ];
 
         # Hyprland
         programs.hyprland = {
