@@ -55,6 +55,7 @@ tooltip {
 #network,
 #workspaces,
 #cpu,
+#battery,
 #memory {
     background: @base;
     padding: 0px 10px;
@@ -87,5 +88,17 @@ tooltip {
 }
 
 #clock {
-    color: @text
+    color: @text;
+}
+
+#battery.good {
+    color: @foam;
+}
+
+#battery.warning {
+    color: @gold;
+}
+
+#battery.critical {
+    color: @love
 }

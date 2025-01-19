@@ -23,7 +23,7 @@
     initExtra = "unsetopt BEEP";
     profileExtra = ''
         if uwsm check may-start; then
-            exec uwsm start -S hyprland-uwsm.desktop && uwsm finalize
+            exec uwsm start -S hyprland-uwsm.desktop
         fi
       '';
   };

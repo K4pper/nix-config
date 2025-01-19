@@ -17,7 +17,7 @@
         };
 
         # Udisks and keyring
-        services.udisks2.enable = true;
+        services.udisks2.enable = false;
         services.gnome.gnome-keyring.enable = true;
 
 

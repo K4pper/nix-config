@@ -4,7 +4,7 @@
         "height": 5, 
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["hyprland/window"],
-        "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock"],
+        "modules-right": ["pulseaudio", "network", "battery", "cpu", "memory", "clock"],
         "hyprland/window": {
             "format": "{}",
             "max-length": 40
@@ -35,6 +35,31 @@
             "format-source": "{volume}% ",
             "format-source-muted": "",
             "on-click": "pavucontrol"
+        },
+        "battery": {
+            "states": {
+                "good": 95,
+                "warning": 25,
+                "critical": 15
+            },
+            "full-at": 99,
+            "format": "{capacity}% {icon}",
+            "format-charging": "{capacity}% 󰂄",
+            "format-plugged": "",
+            "format-alt": "{time} {icon}",
+            "format-icons": [
+                 "󰁺",
+                 "󰁻",
+                 "󰁼",
+                 "󰁽",
+                 "󰁾",
+                 "󰁿",
+                 "󰂀",
+                 "󰂁",
+                 "󰂂",
+                 "󰁹"
+            ],
+            "bat": "BAT0"
         }
     }
 }
