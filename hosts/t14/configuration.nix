@@ -10,10 +10,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   # Networking
   networking.hostName = "t14"; # Define your hostname.
   networking.networkmanager.enable = true;
+  services.resolved.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.kath = {

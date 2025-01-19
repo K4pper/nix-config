@@ -11,6 +11,7 @@
   home.stateVersion = "24.05";
   home.packages = with pkgs; [
         teams-for-linux
+        wireguard-tools
     ];
   home.file = {};
 
