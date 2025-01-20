@@ -60,10 +60,10 @@
                         status = "disable";
                     }
                     {
-                        criteria = "TBD";
+                        criteria = "Dell Inc. Dell U4924DW B2CT0S3";
                         scale = 1.0;
                         status = "enable";
-                        mode = "5120x1440@60Hz";
+                        mode = "5120x1440@59.98Hz";
                     }
                 ];
             }

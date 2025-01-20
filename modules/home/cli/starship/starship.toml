@@ -1,24 +1,13 @@
 format = """
 $username \
 $directory \
+$kubernetes \
 $git_branch \
 $git_status \
 $fill \
-$c \
-$elixir \
-$elm \
-$golang \
-$haskell \
-$java \
-$julia \
-$nodejs \
-$nim \
-$rust \
-$scala \
-$python\n  \
-[󱞪 ](fg:iris)
+$azure \
+\n [ 󱞪 ](fg:iris)
 """
-
 palette = "rose-pine"
 
 [palettes.rose-pine]
@@ -64,3 +53,14 @@ show_always = true
 style_root = "bg:overlay fg:iris"
 style_user = "bg:overlay fg:iris"
 
+[kubernetes]
+symbol = '☸ '
+format = '[](fg:overlay)[$symbol$context( \($namespace\))]($style)[](fg:overlay)'
+disabled = false
+style = "bg:overlay fg:foam"
+
+[azure]
+disabled = false
+format = '[](fg:overlay)[$symbol($subscription)]($style)[](fg:overlay) '
+symbol = '󰠅 '
+style = 'bg:overlay fg:blue bold'

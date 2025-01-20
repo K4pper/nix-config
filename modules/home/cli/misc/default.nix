@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     jq
-    yq
+    yq-go
     ripgrep
     gcc
     nodejs_22
@@ -17,5 +17,8 @@
     gnumake
     gh
     wl-clipboard
+    gum
+    httpie
+    bicep
   ];
 }
