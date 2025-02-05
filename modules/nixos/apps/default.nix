@@ -5,5 +5,6 @@
     ./discord
     ./firefox
     ./prismlauncher
+    ./obsidian
   ];
 }
