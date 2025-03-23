@@ -1,42 +1,30 @@
 {
-
-  description = "My nix flake";
+  description = "Flake for my desktops";
 
   inputs = {
-    # Nix knows where nixpkgs are, therefore the full github URI is not needed
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/master";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixvim.url = "github:nix-community/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
-    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nix-darwin.url = "github:LnL7/nix-darwin/master";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ { nixpkgs, home-manager, nixvim, ... }: 
-  let
-    lib = nixpkgs.lib;
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;
-  in {
+  outputs =
+    {
+    nixpkgs,
+    nix-darwin
+    }:
+    let
+      lib = nixpkgs.lib;
+    in
+    {
     nixosConfigurations = {
-
-      nixos = lib.nixosSystem {
-          system = "x86-64-linux";
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/nixos/configuration.nix
-            ];
-        };
-    };
-
-    homeConfigurations = {
-        kapper = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            hosts/nixos/home.nix
-            nixvim.homeManagerModules.nixvim
-            ./modules
-          ];
-        };
+      AURA-M3GM7PN7F2 = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        modules = [ ./hosts/AURA-M3GM7PN7F2/configuration.nix ];
+      };
+      t14 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [];
       };
     };
+  };
 }
