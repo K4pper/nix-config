@@ -1,33 +1,27 @@
 {
-  description = "Flake for my desktops";
+  description = "Configuration for my Nix Setup";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nix-darwin.url = "github:LnL7/nix-darwin/master";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
 
-  outputs =
-    {
-    nixpkgs,
-    nix-darwin,
-    ...
-    }@inputs:
-    let
-      lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-    in
-    {
+  outputs = {
+      nixpkgs,
+      ...
+    }:
+  let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+        inherit system;
+      };
+  in
+  {
     nixosConfigurations = {
-      AURA-M3GM7PN7F2 = nix-darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        modules = [ ./hosts/AURA-M3GM7PN7F2/configuration.nix ];
-        specialArgs = { inherit inputs; };
-      };
       t14 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [];
-      };
+          inherit system;
+          modules = [ ./hosts/t14/configuration.nix];
+        };
     };
   };
 }
