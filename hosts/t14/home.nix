@@ -14,6 +14,7 @@
     homeDirectory = "/home/kath";
 
   };
+  nixpkgs.config.allowUnfree = true;
 
   # Kanshi
   services.kanshi = {};
