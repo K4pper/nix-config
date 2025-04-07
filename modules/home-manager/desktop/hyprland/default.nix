@@ -46,7 +46,7 @@
       "$mainMod CTRL, Q, exec, $lock"
       "$mainMod, Q, killactive"
       "$mainMod, SPACE, exec, $menu"
-      "mainMod, DELETE, exit"
+      "$mainMod, DELETE, exit"
 
       # Workspaces
       "$mainMod, 1, workspace, 1"
