@@ -1,4 +1,8 @@
 { ... }:
 {
-  imports = [ ./desktop ];
+  imports = [
+    ./desktop
+    ./cli
+    ./apps
+  ];
 }
