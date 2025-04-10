@@ -3,7 +3,7 @@
   imports = [
     ./locale.nix
     ./sound.nix
-    ./virtualization.nix
+    ./virtualisation.nix
     ./desktop.nix
   ];
 

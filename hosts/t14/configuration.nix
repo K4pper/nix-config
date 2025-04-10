@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/nixos
+      ../modules/nixos
     ];
 
   nix.settings.experimental-features = [

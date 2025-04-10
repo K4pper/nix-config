@@ -1,5 +1,4 @@
-{ ... }: 
-
+{ ... }:
 {
   security.rtkit.enable = true;
   hardware.pulseaudio.enable = false;
@@ -18,3 +17,4 @@
     #media-session.enable = true;
   };
 }
+

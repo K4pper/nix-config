@@ -1,4 +1,5 @@
-_: {
+{ ... }:
+{
   # Set your time zone.
   time.timeZone = "Europe/Copenhagen";
 
@@ -23,3 +24,4 @@ _: {
     variant = "altgr-intl";
   };
 }
+
