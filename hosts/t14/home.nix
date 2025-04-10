@@ -4,7 +4,7 @@
 
   imports = [
     ./modules/home-manager
-    ../modules
+    ../modules/home-manager
   ];
 
   # Let Home Manager install and manage itself.
