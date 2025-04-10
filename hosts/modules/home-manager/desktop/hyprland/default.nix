@@ -3,7 +3,7 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     monitor = [
-      ",preferred,auto,auto"
+      ",preferred,auto,1"
     ];
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty";
