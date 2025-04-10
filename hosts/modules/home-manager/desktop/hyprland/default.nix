@@ -17,6 +17,9 @@
     ];
     input = {
       accel_profile = "adaptive";
+      touchpad = {
+        natural_scroll = true;
+      };
     };
     env = [
       "HYPRCURSOR_THEME,rose-pine-hyprcursor"
@@ -33,9 +36,6 @@
       orientation = "center";
       always_center_master = true;
       mfact = "0.55";
-    };
-    touchpad = {
-      natural_scroll = true;
     };
     bind = [
 
