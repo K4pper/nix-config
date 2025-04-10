@@ -9,5 +9,6 @@
     ./hyprlock
     ./swayidle
     ./swaync
+    ./waybar
   ];
 }
