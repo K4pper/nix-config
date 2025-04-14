@@ -22,6 +22,7 @@
   # Kanshi
   services.kanshi = {
     enable = true;
+    systemdTarget = "hyprland-session.target";
     settings = [
       {
         profile.name = "undocked";
@@ -39,8 +40,6 @@
         profile.outputs = [
           {
             criteria = "eDP-1";
-            scale = 1.0;
-            mode = "1920x1200@60.00100";
             status = "disable";
           }
           {
