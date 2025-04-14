@@ -20,5 +20,35 @@
   nixpkgs.config.allowUnfree = true;
 
   # Kanshi
-  services.kanshi = {};
+  services.kanshi = {
+    enable = true;
+    settings = [
+      {
+        profile.name = "undocked";
+        profile.outputs = [
+          {
+            criteria = "eDP-1";
+            scale = 1.0;
+            mode = "1920x1200@60.00100";
+            status = "enable";
+          }
+        ];
+      }
+      {
+        profile.name = "docked-at-home";
+        profile.outputs = [
+          {
+            criteria = "eDP-1";
+            scale = 1.0;
+            mode = "1920x1200@60.00100";
+            status = "disable";
+          }
+          {
+            criteria = "Samsung Electric Company Odyssey G93SC HNTWC01167";
+            status = "enable";
+          }
+        ];
+      }
+    ];
+  };
 }
