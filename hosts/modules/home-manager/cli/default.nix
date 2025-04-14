@@ -6,5 +6,6 @@
     ./tmux
     ./zoxide
     ./zsh
+    ./eza
   ];
 }
