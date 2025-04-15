@@ -7,5 +7,6 @@
     ./zoxide
     ./zsh
     ./eza
+    ./wl-clipboard
   ];
 }
