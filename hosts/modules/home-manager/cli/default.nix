@@ -14,5 +14,7 @@
     ./ripgrep
     ./gcc
     ./bat
+    ./fzf
+    ./powershell
   ];
 }
