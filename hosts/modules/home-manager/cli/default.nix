@@ -16,5 +16,16 @@
     ./bat
     ./fzf
     ./powershell
+    ./trivy
+    ./syft
+    ./dive
+    ./tree
+    ./sipcalc
+    ./gum
+    ./sslscan
+    ./kubelogin
+    ./kubectx
+    ./helm
+    ./kubectl
   ];
 }
