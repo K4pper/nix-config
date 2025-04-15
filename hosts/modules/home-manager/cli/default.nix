@@ -29,5 +29,6 @@
     ./kubectl
     ./kubectl-tree
     ./azure-cli
+    ./htop
   ];
 }
