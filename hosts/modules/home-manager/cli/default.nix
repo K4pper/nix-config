@@ -30,5 +30,6 @@
     ./kubectl-tree
     ./azure-cli
     ./htop
+    ./bicep
   ];
 }
