@@ -53,12 +53,12 @@
       "$mainMod, 4, workspace, 4"
       "$mainMod, 5, workspace, 5"
       "$mainMod, 6, workspace, 6"
-      "$mainMod SHIFT, 1, movetoworkspace, 1"
-      "$mainMod SHIFT, 2, movetoworkspace, 2"
-      "$mainMod SHIFT, 3, movetoworkspace, 3"
-      "$mainMod SHIFT, 4, movetoworkspace, 4"
-      "$mainMod SHIFT, 5, movetoworkspace, 5"
-      "$mainMod SHIFT, 6, movetoworkspace, 6"
+      "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
+      "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
+      "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
+      "$mainMod SHIFT, 4, movetoworkspacesilent, 4"
+      "$mainMod SHIFT, 5, movetoworkspacesilent, 5"
+      "$mainMod SHIFT, 6, movetoworkspacesilent, 6"
 
       # Windows
       "$mainMod, H, movefocus, l"
@@ -76,6 +76,9 @@
 
       # Mouse binds
       "ALT, mouse:272, movewindow"
+
+      # Screenshot
+      "$mainMod, P, exec, hyprshot -m region --clipboard-only"
     ];
     xwayland = {
       force_zero_scaling = true;

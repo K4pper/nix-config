@@ -10,5 +10,6 @@
     ./swayidle
     ./swaync
     ./waybar
+    ./hyprshot
   ];
 }
