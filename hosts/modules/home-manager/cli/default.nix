@@ -28,5 +28,6 @@
     ./helm
     ./kubectl
     ./kubectl-tree
+    ./azure-cli
   ];
 }
