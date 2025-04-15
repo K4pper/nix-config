@@ -6,8 +6,7 @@
       ",highres,auto,1"
     ];
     "$mainMod" = "$SUPER";
-    "$terminal" = "alacritty";
-    "$menu" = "wofi --show drun";
+    "$terminal" = "alacritty"; "$menu" = "wofi --show drun";
     "$lock" = "hyprlock";
     exec-once = [
       "hyprpolkitagent"
@@ -81,6 +80,10 @@
 
       # Screenshot
       "$mainMod, P, exec, hyprshot -m region --clipboard-only"
+
+      # Brightness
+      ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+      ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
     ];
     xwayland = {
       force_zero_scaling = true;

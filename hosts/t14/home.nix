@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
 
@@ -15,6 +15,10 @@
 
     username = "kath";
     homeDirectory = "/home/kath";
+
+    packages = with pkgs; [
+      brightnessctl
+    ];
 
   };
   nixpkgs.config.allowUnfree = true;
