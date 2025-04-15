@@ -54,6 +54,7 @@ tooltip {
 #pulseaudio,
 #network,
 #workspaces,
+#battery,
 #cpu,
 #memory {
     background: @base;
@@ -74,6 +75,10 @@ tooltip {
     color: @foam;
 }
 
+#battery {
+    color: @rose;
+}
+
 #network {
     color: @love;
 }
@@ -87,6 +92,6 @@ tooltip {
 }
 
 #clock {
-    color: @text
+    color: @text;
 }
 

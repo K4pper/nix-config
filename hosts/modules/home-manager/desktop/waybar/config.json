@@ -4,10 +4,41 @@
         "height": 5, 
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["hyprland/window"],
-        "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock"],
+        "modules-right": [
+          "pulseaudio",
+          "battery",
+          "network",
+          "cpu",
+          "memory",
+          "clock"
+          ],
         "hyprland/window": {
             "format": "{}",
             "max-length": 40
+        },
+        "battery": {
+          "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+          },
+          "full-at": 99,
+          "format": "{capacity}% {icon}",
+          "format-chargin": "{capacity}% 󰂄",
+          "format-plugged": "",
+          "format-alt": "{time} {icon}",
+          "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+          ]
         },
         "clock": {
             "format": "{:%H:%M }",
@@ -38,4 +69,3 @@
         }
     }
 }
-
