@@ -47,7 +47,15 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_6_14;
+
+  # Swap
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 32*1024;
+    }
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
