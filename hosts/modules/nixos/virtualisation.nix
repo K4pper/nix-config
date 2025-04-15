@@ -1,7 +1,10 @@
 { ... }:
 {
   virtualisation.libvirtd.enable = true;
-  virtualisation.docker.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
   programs.virt-manager.enable = true;
 }
 
