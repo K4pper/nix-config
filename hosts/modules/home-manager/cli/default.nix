@@ -31,5 +31,6 @@
     ./azure-cli
     ./htop
     ./bicep
+    ./unzip
   ];
 }
