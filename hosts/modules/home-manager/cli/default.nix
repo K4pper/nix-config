@@ -32,5 +32,6 @@
     ./htop
     ./bicep
     ./unzip
+    ./dotnet-sdk
   ];
 }
