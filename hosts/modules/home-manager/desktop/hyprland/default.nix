@@ -17,6 +17,8 @@
     ];
     input = {
       accel_profile = "adaptive";
+      kb_layout = "us";
+      kb_variant = "altgr-intl";
       touchpad = {
         natural_scroll = true;
       };
