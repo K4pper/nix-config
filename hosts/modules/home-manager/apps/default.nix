@@ -5,5 +5,6 @@
     ./discord
     ./obsidian
     ./google-chrome
+    ./firefox
   ];
 }
