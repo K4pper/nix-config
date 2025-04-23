@@ -28,9 +28,7 @@
     ./helm
     ./kubectl
     ./kubectl-tree
-    ./azure-cli
     ./htop
-    ./bicep
     ./unzip
     ./dotnet-sdk
   ];
