@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   virtualisation.libvirtd.enable = true;
   virtualisation.podman = {
@@ -6,5 +6,9 @@
     dockerCompat = true;
   };
   programs.virt-manager.enable = true;
+  environment.systemPackages = with pkgs; [
+    distrobox
+    podman-compose
+  ];
 }
 

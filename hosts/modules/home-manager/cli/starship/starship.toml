@@ -4,6 +4,7 @@ $directory \
 $kubernetes \
 $git_branch \
 $git_status \
+$container \
 $fill \
 $azure \
 \n [ 󱞪 ](fg:iris)
@@ -58,6 +59,11 @@ symbol = '☸ '
 format = '[](fg:overlay)[$symbol$context( \($namespace\))]($style)[](fg:overlay)'
 disabled = false
 style = "bg:overlay fg:foam"
+
+[container]
+disabled = false
+style = 'bg:overlay fg:iris'
+format = '[](fg:overlay)[$symbol ($name)]($style)[](fg:overlay) '
 
 [azure]
 disabled = false
