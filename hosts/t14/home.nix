@@ -52,6 +52,19 @@
           }
         ];
       }
+      {
+        profile.name = "docked-at-work";
+        profile.outputs = [
+          {
+            criteria = "eDP-1";
+            status = "disable";
+          }
+          {
+            criteria = "Dell Inc. Dell U4924DW B2CT0S3";
+            status = "enable";
+          }
+        ];
+      }
     ];
   };
 }
