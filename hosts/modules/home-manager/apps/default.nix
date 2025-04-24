@@ -6,5 +6,6 @@
     ./obsidian
     ./google-chrome
     ./firefox
+    ./signal-desktop
   ];
 }
