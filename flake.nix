@@ -1,42 +1,54 @@
 {
+  description = "Configuration for my Nix Setup";
 
-  description = "My nix flake";
-
-  inputs = {
-    # Nix knows where nixpkgs are, therefore the full github URI is not needed
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/master";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixvim.url = "github:nix-community/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
-    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs @ { nixpkgs, home-manager, nixvim, ... }: 
+  outputs = {
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      nixvim,
+      ...
+    }@inputs:
   let
-    lib = nixpkgs.lib;
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;
-  in {
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+        inherit system;
+      };
+  in
+  {
     nixosConfigurations = {
-
-      nixos = lib.nixosSystem {
-          system = "x86-64-linux";
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/nixos/configuration.nix
-            ];
+      t14 = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/t14/configuration.nix];
         };
     };
-
     homeConfigurations = {
-        kapper = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            hosts/nixos/home.nix
-            nixvim.homeManagerModules.nixvim
-            ./modules
-          ];
+      "kath@t14" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
+          pkgs-unstable = import nixpkgs-unstable {
+            config.allowUnfree = true;
+            inherit system;
+          };
+          inherit inputs;
         };
+        modules = [
+          ./hosts/t14/home.nix
+          nixvim.homeManagerModules.nixvim
+        ];
       };
     };
+  };
 }
