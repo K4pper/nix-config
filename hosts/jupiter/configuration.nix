@@ -28,7 +28,7 @@
     description = "Kasper Therkelsen";
     extraGroups = [
       "networkmanager"
-      "wheel" 
+      "wheel"
     ];
   };
 
