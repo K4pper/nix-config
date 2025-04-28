@@ -33,7 +33,7 @@ inputs = {
           modules = [ ./hosts/t14/configuration.nix ];
         };
 
-      jupiter = nixpkgs.lib.nixSystem {
+      jupiter = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts/jupiter/configuration.nix ];
       };
