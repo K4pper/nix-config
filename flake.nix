@@ -22,8 +22,7 @@ inputs = {
       ...
     }@inputs:
   let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
+    system = "x86_64-linux"; pkgs = import nixpkgs {
         inherit system;
       };
   in
@@ -31,8 +30,13 @@ inputs = {
     nixosConfigurations = {
       t14 = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/t14/configuration.nix];
+          modules = [ ./hosts/t14/configuration.nix ];
         };
+
+      jupiter = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [ ./hosts/jupiter/configuration.nix ];
+      };
     };
     homeConfigurations = {
       "kath@t14" = home-manager.lib.homeManagerConfiguration {
@@ -46,6 +50,21 @@ inputs = {
         };
         modules = [
           ./hosts/t14/home.nix
+          nixvim.homeManagerModules.nixvim
+        ];
+      };
+
+      "kapper@jupiter" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
+          pkgs-unstable = import nixpkgs-unstable {
+            config.allowUnfree = true;
+            inherit system;
+          };
+          inherit inputs;
+        };
+        modules = [
+          ./hosts/jupiter/home.nix
           nixvim.homeManagerModules.nixvim
         ];
       };

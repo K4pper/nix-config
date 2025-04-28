@@ -31,5 +31,6 @@
     ./htop
     ./unzip
     ./dotnet-sdk
+    ./ssh
   ];
 }
