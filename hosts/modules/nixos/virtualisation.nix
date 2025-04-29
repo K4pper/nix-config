@@ -3,7 +3,9 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.podman = {
     enable = true;
-    dockerCompat = true;
+  };
+  virtualisation.docker = {
+    enable = true;
   };
   programs.virt-manager.enable = true;
   environment.systemPackages = with pkgs; [
