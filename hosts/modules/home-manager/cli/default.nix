@@ -32,6 +32,5 @@
     ./unzip
     ./dotnet-sdk
     ./ssh
-    ./kind
   ];
 }
