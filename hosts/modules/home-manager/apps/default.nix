@@ -7,5 +7,6 @@
     ./google-chrome
     ./firefox
     ./signal-desktop
+    ./postman
   ];
 }
