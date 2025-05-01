@@ -32,5 +32,6 @@
     ./unzip
     ./dotnet-sdk
     ./ssh
+    ./pavucontrol
   ];
 }
