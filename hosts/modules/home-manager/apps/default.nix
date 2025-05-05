@@ -8,5 +8,6 @@
     ./firefox
     ./signal-desktop
     ./postman
+    ./dolphin
   ];
 }
