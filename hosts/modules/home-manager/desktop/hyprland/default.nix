@@ -79,7 +79,7 @@
       "ALT, mouse:272, movewindow"
 
       # Screenshot
-      "$mainMod, P, exec, hyprshot -m region --clipboard-only"
+      "$mainMod, P, exec, hyprshot -m region -r screenshot | swappy -f -"
 
       # Brightness
       ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
