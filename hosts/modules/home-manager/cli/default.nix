@@ -33,5 +33,6 @@
     ./dotnet-sdk
     ./ssh
     ./pavucontrol
+    ./go
   ];
 }
