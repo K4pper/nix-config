@@ -9,5 +9,6 @@
     ./signal-desktop
     ./postman
     ./dolphin
+    ./zathura
   ];
 }
