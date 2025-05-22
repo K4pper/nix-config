@@ -7,6 +7,7 @@
     opts = {
       number = true;
       relativenumber = true;
+      scrolloff = 25;
       mouse = "a";
       ignorecase = true;
       smartcase = true;
