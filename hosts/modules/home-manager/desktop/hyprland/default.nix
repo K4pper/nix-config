@@ -94,6 +94,10 @@
       ", XF86AudioPause, exec, playerctl play-pause"
       ", XF86AudioNext, exec, playerctl next"
       ", XF86AudioPrev, exec, playerctl previous"
+
+      # Fullscreen & Maximize
+      "$mainMod, M, fullscreen, 1"
+      "$mainMod, F, fullscreen, 0"
     ];
     xwayland = {
       force_zero_scaling = true;
