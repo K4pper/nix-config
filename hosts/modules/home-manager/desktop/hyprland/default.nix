@@ -8,6 +8,7 @@
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty"; "$menu" = "wofi --show drun";
     "$lock" = "hyprlock";
+    "$browser" = "firefox";
     exec-once = [
       "hyprpolkitagent"
       "swaync"
@@ -43,6 +44,7 @@
       # applications
       "$mainMod, T, exec, $terminal"
       "$mainMod CTRL, Q, exec, $lock"
+      "$mainMod, B, exec, $browser"
       "$mainMod, Q, killactive"
       "$mainMod, SPACE, exec, $menu"
       "$mainMod, DELETE, exit"
