@@ -15,8 +15,7 @@
     ];
 
     extraConfig = ''
-      # Fix color in nvim for alacritty
-      set -g default-terminal "tmux-256color"
+      # Fix color in nvim for alacritty set -g default-terminal "tmux-256color"
       set -ag terminal-overrides ",xterm-256color:RGB"
 
       set -g allow-passthrough on
@@ -58,6 +57,10 @@
       # shell
       set -gu default-command
       set -g default-shell "$SHELL"
+
+      # Start windows and panes at 1, not 0
+      set -g base-index 1
+      setw -g pane-base-index 1
       '';
   };
 }
