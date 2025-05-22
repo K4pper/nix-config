@@ -14,6 +14,7 @@
     ./conform-nvim.nix
     ./mini.nix
     ./render-markdown.nix
+    ./surround.nix
   ];
 
   programs.nixvim = {
