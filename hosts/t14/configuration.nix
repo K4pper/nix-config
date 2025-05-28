@@ -51,7 +51,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_6_14;
 
@@ -82,6 +81,15 @@
 
       };
 };
+
+  services.keyd = {
+    enable = true;
+    keyboards.default.settings = {
+      main = {
+        capslock = "esc";
+      };
+    };
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
