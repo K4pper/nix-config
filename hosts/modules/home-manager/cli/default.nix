@@ -34,5 +34,6 @@
     ./ssh
     ./pavucontrol
     ./go
+    ./ingress2gateway
   ];
 }
