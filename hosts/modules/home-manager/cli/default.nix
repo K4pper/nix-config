@@ -34,6 +34,5 @@
     ./ssh
     ./pavucontrol
     ./go
-    ./qmk
   ];
 }
