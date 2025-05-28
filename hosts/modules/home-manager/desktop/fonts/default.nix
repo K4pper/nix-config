@@ -2,6 +2,6 @@
 {
   home.packages = with pkgs; [
     google-fonts
-    nerdfonts
+    nerd-fonts.jetbrains-mono
   ];
 }
