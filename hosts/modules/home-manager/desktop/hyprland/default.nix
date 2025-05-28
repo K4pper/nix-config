@@ -36,7 +36,7 @@
     master = {
       allow_small_split = true;
       orientation = "center";
-      always_center_master = true;
+      slave_count_for_center_master = 0;
       mfact = "0.55";
     };
     bind = [
