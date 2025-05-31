@@ -4,6 +4,7 @@
   wayland.windowManager.hyprland.settings = {
     monitor = [
       "HDMI-A-1,5120x1440@60.00,auto,1"
+      "DP-2, 5120x1440@240.00,auto,1"
     ];
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty"; "$menu" = "wofi --show drun";
