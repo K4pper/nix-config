@@ -59,11 +59,6 @@
     }
   ];
 
-  # Disks
-  fileSystems."/mnt/deez" = {
-    device = "/dev/disk/by-uuid/df26a40f-c468-4c8e-b94b-a367622fa648";
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
