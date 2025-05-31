@@ -40,6 +40,9 @@
       slave_count_for_center_master = 0;
       mfact = "0.55";
     };
+    xwayland = {
+      force_zero_scaling = true;
+    };
     bind = [
 
       # applications
@@ -102,9 +105,6 @@
       "$mainMod, M, fullscreen, 1"
       "$mainMod, F, fullscreen, 0"
     ];
-    xwayland = {
-      force_zero_scaling = true;
-    };
   };
 }
 
