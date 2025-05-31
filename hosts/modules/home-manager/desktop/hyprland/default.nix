@@ -17,7 +17,7 @@
       "exec swayidle -w timeout 999 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 999 '$lock' before-sleep '$lock'"
     ];
     input = {
-      accel_profile = "adaptive";
+      accel_profile = "flat";
       kb_layout = "us";
       kb_variant = "altgr-intl";
       touchpad = {
@@ -43,6 +43,11 @@
     xwayland = {
       force_zero_scaling = true;
     };
+    windowrulev2 = [
+      # Steam
+      "float, title:^(Friends List)$"
+      "float, class:^(steam)$"
+    ];
     bind = [
 
       # applications
@@ -81,9 +86,6 @@
       "$mainMod, period, layoutmsg, mfact +0.1"
       "$mainMod, comma, layoutmsg, mfact -0.1"
 
-      # Mouse binds
-      "ALT, mouse:272, movewindow"
-
       # Screenshot
       "$mainMod, P, exec, hyprshot -m region -r screenshot | swappy -f -"
 
@@ -104,6 +106,12 @@
       # Fullscreen & Maximize
       "$mainMod, M, fullscreen, 1"
       "$mainMod, F, fullscreen, 0"
+    ];
+    bindm = [
+      "$mainMod, mouse:272, movewindow"
+    ];
+    bindc = [
+      "$mainMod, mouse:272, togglefloating"
     ];
   };
 }
