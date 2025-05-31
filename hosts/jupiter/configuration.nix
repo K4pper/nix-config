@@ -59,6 +59,10 @@
     }
   ];
 
+  # Disks
+  fileSystems."/mnt/venus" = {
+    device = "/dev/disk/by-uuid/761dd54f-dceb-4885-b8d5-c17287ad5bd8";
+  };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
