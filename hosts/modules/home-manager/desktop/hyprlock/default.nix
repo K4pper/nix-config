@@ -56,7 +56,7 @@
           color = "rgba(216, 222, 233, 0.70)";
           font_size = 30;
           font_family = "JetBrains Mono Extrabold";
-          position = "0, 170";
+          position = "0, 60";
           halign = "center";
           valign = "center";
         }
