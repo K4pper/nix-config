@@ -46,7 +46,7 @@
           color = "rgba(242, 243, 244, 0.75)";
           font_size = 95;
           font_family = "JetBrains Mono Extrabold";
-          position = "0, -370";
+          position = "0, -30%";
           halign = "center";
           valign = "top";
         }
@@ -56,7 +56,7 @@
           color = "rgba(216, 222, 233, 0.70)";
           font_size = 30;
           font_family = "JetBrains Mono Extrabold";
-          position = "0, 60";
+          position = "0, 8%";
           halign = "center";
           valign = "center";
         }
