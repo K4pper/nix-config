@@ -17,7 +17,7 @@
       "exec swayidle -w timeout 999 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 999 '$lock' before-sleep '$lock'"
     ];
     input = {
-      accel_profile = "flat";
+      accel_profile = "adaptive";
       kb_layout = "us";
       kb_variant = "altgr-intl";
       touchpad = {
