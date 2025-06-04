@@ -10,6 +10,7 @@
     ./swayidle
     ./swaync
     ./waybar
+    ./hyprpanel
     ./hyprshot
     ./swappy
   ];
