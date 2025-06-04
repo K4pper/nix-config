@@ -56,6 +56,7 @@ tooltip {
 #workspaces,
 #battery,
 #cpu,
+#bluetooth,
 #memory {
     background: @base;
     padding: 0px 10px;
@@ -95,3 +96,6 @@ tooltip {
     color: @text;
 }
 
+#bluetooth {
+    color: @iris;
+}
