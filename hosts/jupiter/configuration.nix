@@ -59,10 +59,6 @@
     }
   ];
 
-  # Disks
-  fileSystems."/mnt/venus" = {
-    device = "/dev/disk/by-uuid/761dd54f-dceb-4885-b8d5-c17287ad5bd8";
-  };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -72,6 +68,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
 }
