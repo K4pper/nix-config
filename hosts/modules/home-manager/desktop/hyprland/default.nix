@@ -12,7 +12,6 @@
     "$browser" = "firefox";
     exec-once = [
       "hyprpolkitagent"
-      "exec swayidle -w timeout 999 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 999 '$lock' before-sleep '$lock'"
     ];
     input = {
       accel_profile = "adaptive";

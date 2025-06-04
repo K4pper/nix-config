@@ -7,7 +7,7 @@
     ./hyprpolkitagent
     ./wofi
     ./hyprlock
-    ./swayidle
+    ./hypridle
     ./waybar
     ./hyprpanel
     ./hyprshot
