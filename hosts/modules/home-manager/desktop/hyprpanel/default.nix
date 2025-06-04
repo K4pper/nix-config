@@ -28,6 +28,9 @@
         bluetooth = {
           label = false;
         };
+        network = {
+          label = false;
+        };
       };
       menus.clock = {
         time = {
