@@ -25,6 +25,9 @@
           format = "%H:%M";
         };
         workspaces.show_icons = true;
+        bluetooth = {
+          label = false;
+        };
       };
       menus.clock = {
         time = {
