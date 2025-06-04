@@ -8,7 +8,6 @@
     ./wofi
     ./hyprlock
     ./swayidle
-    ./swaync
     ./waybar
     ./hyprpanel
     ./hyprshot
