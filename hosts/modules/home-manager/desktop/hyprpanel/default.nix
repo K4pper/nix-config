@@ -21,9 +21,6 @@
         clock = {
           format = "%H:%M";
         };
-        launcher = {
-          icon = "󱄅";
-        };
       };
       menus.clock = {
         time = {
