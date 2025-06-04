@@ -17,10 +17,14 @@
           };
         };
       };
+      theme = {
+        name = "rose_pine";
+      };
       bar = {
         clock = {
           format = "%H:%M";
         };
+        workspaces.show_icons = true;
       };
       menus.clock = {
         time = {
