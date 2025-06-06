@@ -103,6 +103,11 @@
       # Fullscreen & Maximize
       "$mainMod, M, fullscreen, 1"
       "$mainMod, F, fullscreen, 0"
+
+      # Orientation
+      "$mainMod CTRL, J, layoutmsg, orientationcenter"
+      "$mainMod CTRL, H, layoutmsg, orientationleft"
+
     ];
     bindm = [
       "$mainMod, mouse:272, movewindow"
