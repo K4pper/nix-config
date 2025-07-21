@@ -19,7 +19,7 @@
             package = null;
             filetypes = [
               "bicep"
-              "bicepparam"
+              "bicep-params"
             ];
             autostart = true;
           };
