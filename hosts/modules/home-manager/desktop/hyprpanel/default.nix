@@ -5,13 +5,11 @@
     enable = true;
     systemd.enable = true;
     settings = {
-      layout = {
-        "bar.layouts" = {
-          "*" = {
-            left = [ "workspaces" ];
-            middle = [ "windowtitle" ];
-            right = [ "volume" "network" "bluetooth" "battery" "clock" "systray" "notifications" ];
-          };
+      bar.layouts = {
+        "*" = {
+          left = [ "workspaces" ];
+          middle = [ "windowtitle" ];
+          right = [ "volume" "network" "bluetooth" "battery" "clock" "systray" "notifications" ];
         };
       };
       theme = {
