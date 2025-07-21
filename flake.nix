@@ -12,10 +12,6 @@ inputs = {
       url = "github:nix-community/nixvim/nixos-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -23,7 +19,6 @@ inputs = {
       nixpkgs-unstable,
       home-manager,
       nixvim,
-      hyprpanel,
       ...
     }@inputs:
   let
