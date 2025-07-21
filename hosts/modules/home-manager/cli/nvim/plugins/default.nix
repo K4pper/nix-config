@@ -7,7 +7,6 @@
     ./bufferline.nix
     ./telescope.nix
     ./lsp.nix
-    ./lsp-format.nix
     ./auto-pair.nix
     ./cmp.nix
     ./conform-nvim.nix
