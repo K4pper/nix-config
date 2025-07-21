@@ -18,6 +18,8 @@
    # Enable git
    programs.git.enable = true;
 
+   services.upower.enable = true;
+
    # Automatic cleanup
    nix.gc.automatic = true;
    nix.gc.dates = "daily";
