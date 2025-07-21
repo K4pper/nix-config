@@ -13,6 +13,14 @@
             terminal = false;
           };
         };
+        surround = {
+          mappings = {
+            add = "gsa";
+            delete = "gsd";
+            highlight = "gsh";
+            replace = "gsr";
+          };
+        };
       };
       mockDevIcons = true;
     };

@@ -10,7 +10,6 @@
     ./cmp.nix
     ./mini.nix
     ./render-markdown.nix
-    ./surround.nix
   ];
 
   programs.nixvim = {
