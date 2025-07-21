@@ -14,6 +14,7 @@
       "hyprpolkitagent"
     ];
     input = {
+      sensitivity = 0.1;
       accel_profile = "adaptive";
       kb_layout = "us";
       kb_variant = "altgr-intl";
