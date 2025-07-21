@@ -9,7 +9,6 @@
     ./lsp.nix
     ./auto-pair.nix
     ./cmp.nix
-    ./conform-nvim.nix
     ./mini.nix
     ./render-markdown.nix
     ./surround.nix

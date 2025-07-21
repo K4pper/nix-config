@@ -22,5 +22,17 @@
       list = true;
       linebreak = true;
     };
+    diagnostic = {
+      settings = {
+        virutal_lines = {
+          enable = true;
+          current_line = true;
+        };
+        virtual_text = false;
+        jump = {
+          severity.__raw = "vim.diagnostic.severity.WARN";
+        };
+      };
+    };
   };
 }
