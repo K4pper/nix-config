@@ -19,6 +19,7 @@
             package = null;
             filetypes = [
               "bicep"
+              "bicepparam"
             ];
             autostart = true;
           };

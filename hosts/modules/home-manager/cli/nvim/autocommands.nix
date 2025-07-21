@@ -21,5 +21,15 @@
       ];
       command = "set filetype=bicep";
     }
+    {
+      event = [
+        "BufNewFile"
+        "BufRead"
+      ];
+      pattern = [
+        "*.bicepparam"
+      ];
+      command = "set filetype=bicep-params";
+    }
   ];
 }
