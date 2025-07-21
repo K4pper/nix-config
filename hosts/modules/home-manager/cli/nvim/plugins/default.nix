@@ -7,7 +7,6 @@
     ./bufferline.nix
     ./telescope.nix
     ./lsp.nix
-    ./auto-pair.nix
     ./cmp.nix
     ./mini.nix
     ./render-markdown.nix
