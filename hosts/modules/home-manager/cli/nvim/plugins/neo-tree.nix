@@ -4,7 +4,7 @@
       {
         mode = "n";
         key = "<leader>e";
-        action = ":Neotree action=focus reveal toggle<CR>";
+        action = ":Neotree action=show toggle<CR>";
         options.silent = true;
       }
     ];
@@ -14,6 +14,10 @@
       window = {
         width = 30;
         autoExpandWidth = true;
+        mappings = {
+          l = "open";
+          h = "close_node";
+        };
       };
       filesystem = {
         followCurrentFile = {
