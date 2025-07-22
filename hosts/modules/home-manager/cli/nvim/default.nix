@@ -8,6 +8,7 @@
     defaultEditor = true;
     extraLuaConfig = ''
       ${builtins.readFile ./settings.lua}
+      ${builtins.readFile ./keybinds.lua}
     '';
     plugins = with pkgs.vimPlugins; [
       {
