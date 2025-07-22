@@ -9,7 +9,7 @@
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty"; "$menu" = "wofi --show drun";
     "$lock" = "hyprlock";
-    "$browser" = "firefox";
+    "$browser" = "google-chrome-stable";
     exec-once = [
       "hyprpolkitagent"
     ];
@@ -41,11 +41,6 @@
     xwayland = {
       force_zero_scaling = true;
     };
-    windowrulev2 = [
-      # Steam
-      "float, title:^(Friends List)$"
-      "float, class:^(steam)$"
-    ];
     bind = [
 
       # applications
