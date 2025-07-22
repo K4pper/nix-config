@@ -9,7 +9,7 @@
     ./hyprlock
     ./hypridle
     ./waybar
-    ./hyprpanel
+    ./swaync
     ./hyprshot
     ./swappy
   ];

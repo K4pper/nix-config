@@ -12,9 +12,7 @@
           right = [ "volume" "network" "bluetooth" "battery" "clock" "systray" "notifications" ];
         };
       };
-      theme = {
-        name = "rose_pine";
-      };
+      theme = "tokyo_night";
       bar = {
         clock = {
           format = "%H:%M";

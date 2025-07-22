@@ -7,9 +7,9 @@
       sensible
       yank
       {
-    plugin = rose-pine;
+    plugin = tokyo-night-tmux;
       extraConfig = ''
-        set -g @rose_pine_variant 'main'
+        set -g @plugin "janoamaral/tokyo-night-tmux"
       '';
       }
     ];

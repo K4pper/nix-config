@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.neovim = {
     enable = true;
@@ -11,8 +11,8 @@
     '';
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = rose-pine;
-        config = "colorscheme rose-pine";
+        plugin = tokyonight-nvim;
+        config = "colorscheme tokyonight-night";
       }
     ];
   };
