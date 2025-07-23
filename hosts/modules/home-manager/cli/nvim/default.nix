@@ -39,6 +39,16 @@ in
       ${builtins.readFile ./keybinds.lua}
     '';
     plugins = with pkgs.vimPlugins; [
+      {
+        plugin = nvim-cmp;
+        config = toLuaFile ./plugins/cmp.lua;
+      }
+      cmp-buffer
+      cmp-path
+      cmp-nvim-lsp
+      cmp_luasnip
+      luasnip
+
       nvim-web-devicons
       plenary-nvim
       {
