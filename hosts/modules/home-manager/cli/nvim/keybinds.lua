@@ -17,13 +17,16 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
 -- move between buffers
-map("n", "<S-h>", "<cmd>bprevious<cr>")
-map("n", "<S-l>", "<cmd>bnext<cr>")
+map("n", "<S-h>", "<CMD>bprevious<CR>")
+map("n", "<S-l>", "<CMD>bnext<CR>")
 
 -- clear search with escape
-map("n", "<esc>", "<cmd>noh<cr><esc>")
+map("n", "<esc>", "<CMD>noh<CR><ESC>")
 
 -- telescope
 map("n", "<leader>ff", ":Telescope find_files<CR>")
 map("n", "<leader>fg", ":Telescope live_grep<CR>")
 map("n", "<leader>fb", ":Telescope buffers<CR>")
+
+-- lazygit
+map("n", "<leader>lg", "<CMD>LazyGit<CR>")

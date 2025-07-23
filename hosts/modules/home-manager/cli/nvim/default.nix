@@ -39,6 +39,7 @@ in
     '';
     plugins = with pkgs.vimPlugins; [
       nvim-web-devicons
+      plenary-nvim
       {
         plugin = rose-pine;
         config = "colorscheme rose-pine";
@@ -57,6 +58,9 @@ in
       {
         plugin = telescope-nvim;
         config = toLuaFile ./plugins/telescope.lua;
+      }
+      {
+        plugin = lazygit-nvim;
       }
     ];
   };
