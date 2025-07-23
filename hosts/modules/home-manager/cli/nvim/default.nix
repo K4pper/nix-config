@@ -69,12 +69,10 @@ in
           p.tree-sitter-bash
           p.tree-sitter-lua
           p.tree-sitter-json
-          p.tree-sitter-comment
           p.tree-sitter-markdown
           p.tree-sitter-markdown-inline
-          p.tree-sitter-c-sharp
-          p.tree-sitter-python
           p.tree-sitter-yaml
+          p.tree-sitter-dockerfile
           (pkgs.tree-sitter.buildGrammar {
             language = "bicep";
             version = "bff5988";
