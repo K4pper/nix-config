@@ -12,8 +12,8 @@
     '';
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = tokyonight-nvim;
-        config = "colorscheme tokyonight-night";
+        plugin = rose-pine;
+        config = "colorscheme rose-pine";
       }
     ];
   };
