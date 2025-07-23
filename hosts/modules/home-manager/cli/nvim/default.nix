@@ -63,6 +63,31 @@ in
       {
         plugin = lazygit-nvim;
       }
+      {
+        plugin = (nvim-treesitter.withPlugins (p: [
+          p.tree-sitter-nix
+          p.tree-sitter-bash
+          p.tree-sitter-lua
+          p.tree-sitter-json
+          p.tree-sitter-comment
+          p.tree-sitter-markdown
+          p.tree-sitter-markdown-inline
+          p.tree-sitter-c-sharp
+          p.tree-sitter-python
+          p.tree-sitter-yaml
+          (pkgs.tree-sitter.buildGrammar {
+            language = "bicep";
+            version = "bff5988";
+            src = pkgs.fetchFromGitHub {
+              owner = "tree-sitter-grammars";
+              repo = "tree-sitter-bicep";
+              rev = "bff59884307c0ab009bd5e81afd9324b46a6c0f9";
+              hash = "sha256-+qvhJgYqs8aj/Kmojr7lmjbXmskwVvbYBn4ia9wOv3k=";
+            };
+          })
+        ]));
+        config = toLuaFile ./plugins/treesitter.lua;
+      }
     ];
   };
   home.sessionVariables.BICEP_LANGSERVER = "${bicepLanguageServer}/Bicep.LangServer.dll";
