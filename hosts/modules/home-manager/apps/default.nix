@@ -10,5 +10,6 @@
     ./postman
     ./dolphin
     ./zathura
+    ./vscodium
   ];
 }

@@ -12,6 +12,8 @@
     "$browser" = "google-chrome-stable";
     exec-once = [
       "hyprpolkitagent"
+      "swaync"
+      "waybar"
     ];
     input = {
       sensitivity = 0.1;
