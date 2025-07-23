@@ -25,7 +25,7 @@
           },
           "full-at": 99,
           "format": "{capacity}% {icon}",
-          "format-chargin": "{capacity}% 󰂄",
+          "format-charging": "{capacity}% 󰂄",
           "format-plugged": "",
           "format-alt": "{time} {icon}",
           "format-icons": [
@@ -53,7 +53,8 @@
             "format": "{}% "
         },
         "network": {
-            "format-wifi": "{essid} ({signalStrength}%) ",
+            "format-wifi": "",
+            "tooltip-format-wifi": "{essid} ({signalStrength}%)",
             "format-ethernet": "󰈀",
             "format-linked": "{ifname} (No IP)",
             "format-disconnected": "Disconnected ",
