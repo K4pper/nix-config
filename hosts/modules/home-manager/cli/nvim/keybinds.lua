@@ -23,6 +23,12 @@ map("n", "<S-l>", "<CMD>bnext<CR>")
 -- clear search with escape
 map("n", "<esc>", "<CMD>noh<CR><ESC>")
 
+-- keep cursor centered when jumping
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+
 -- telescope
 map("n", "<leader>ff", ":Telescope find_files<CR>")
 map("n", "<leader>fg", ":Telescope live_grep<CR>")
