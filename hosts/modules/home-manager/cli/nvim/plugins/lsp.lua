@@ -5,3 +5,20 @@ require 'lspconfig'.nil_ls.setup {
         },
     },
 }
+
+require 'lspconfig'.lua_ls.setup {
+    settings = {
+        Lua = {
+            diagnostics = { globals = { 'vim' } },
+        },
+    },
+}
+
+-- TODO: Install the LSP and configure it here
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bicep
+-- https://github.com/Azure/bicep/releases
+local bicep_lsp_bin = os.getenv('BICEP_LANGSERVER')
+require 'lspconfig'.bicep.setup {
+    cmd = { "dotnet", bicep_lsp_bin },
+    filetypes = { 'bicep', 'bicep-params' }
+}

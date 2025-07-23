@@ -24,6 +24,9 @@ vim.opt.cursorline = true
 
 vim.opt.clipboard = "unnamedplus"
 
+vim.cmd [[ autocmd BufNewFile,BufRead *.bicepparam set filetype=bicep-params ]]
+vim.cmd [[ autocmd BufNewFile,BufRead *.bicep set filetype=bicep ]]
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "nix",
 	command = "setlocal shiftwidth=2 tabstop=2"

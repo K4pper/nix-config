@@ -22,3 +22,8 @@ map("n", "<S-l>", "<cmd>bnext<cr>")
 
 -- clear search with escape
 map("n", "<esc>", "<cmd>noh<cr><esc>")
+
+-- telescope
+map("n", "<leader>ff", ":Telescope find_files<CR>")
+map("n", "<leader>fg", ":Telescope live_grep<CR>")
+map("n", "<leader>fb", ":Telescope buffers<CR>")
