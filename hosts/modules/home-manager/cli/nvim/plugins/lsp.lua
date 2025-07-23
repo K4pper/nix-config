@@ -14,6 +14,8 @@ require 'lspconfig'.lua_ls.setup {
     },
 }
 
+require 'lspconfig'.docker_compose_language_service.setup {}
+
 -- TODO: Install the LSP and configure it here
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bicep
 -- https://github.com/Azure/bicep/releases

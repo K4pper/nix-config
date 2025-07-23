@@ -31,6 +31,7 @@ in
       nixfmt-rfc-style
       nil
       lua-language-server
+      docker-compose-language-service
       bicepLanguageServer
     ];
     extraLuaConfig = ''
