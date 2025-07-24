@@ -57,6 +57,7 @@ tooltip {
 #battery,
 #cpu,
 #bluetooth,
+#tray,
 #memory {
     background: @base;
     padding: 0px 10px;

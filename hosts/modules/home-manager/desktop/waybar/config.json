@@ -11,7 +11,8 @@
           "network",
           "cpu",
           "memory",
-          "clock"
+          "clock",
+          "tray"
           ],
         "hyprland/window": {
             "format": "{}",
@@ -72,6 +73,9 @@
         "bluetooth": {
             "format": "",
             "on-click": "blueman-manager"
+        },
+        "tray": {
+            "spacing": 10
         }
     }
 }
