@@ -1,7 +1,7 @@
 {
   description = "Configuration for my Nix Setup";
 
-inputs = {
+  inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
@@ -15,23 +15,24 @@ inputs = {
   };
 
   outputs = {
-      nixpkgs,
-      nixpkgs-unstable,
-      home-manager,
-      nixvim,
-      ...
-    }@inputs:
+    nixpkgs,
+    nixpkgs-unstable,
+    home-manager,
+    nixvim,
+    ...
+  }@inputs:
+
   let
     system = "x86_64-linux"; pkgs = import nixpkgs {
-        inherit system;
-      };
+      inherit system;
+    };
   in
   {
     nixosConfigurations = {
       t14 = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [ ./hosts/t14/configuration.nix ];
-        };
+        inherit system;
+        modules = [ ./hosts/t14/configuration.nix ];
+      };
 
       jupiter = nixpkgs.lib.nixosSystem {
         inherit system;
