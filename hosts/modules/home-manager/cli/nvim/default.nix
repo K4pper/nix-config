@@ -74,6 +74,10 @@ in
         plugin = lazygit-nvim;
       }
       {
+        plugin = oil-nvim;
+        config = toLuaFile ./plugins/oil.lua;
+      }
+      {
         plugin = (nvim-treesitter.withPlugins (p: [
           p.tree-sitter-nix
           p.tree-sitter-bash
