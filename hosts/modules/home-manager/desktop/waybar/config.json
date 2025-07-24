@@ -26,7 +26,7 @@
           "full-at": 99,
           "format": "{capacity}% {icon}",
           "format-charging": "{capacity}% 󰂄",
-          "format-plugged": "",
+          "format-plugged": "󰂄",
           "format-alt": "{time} {icon}",
           "format-icons": [
             "󰁺",
