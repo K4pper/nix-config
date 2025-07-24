@@ -15,11 +15,6 @@
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  # Gnome keyring
-  services.gnome.gnome-keyring.enable = true;
-
-
-
   boot.initrd.systemd.enable = true;
 }
 
