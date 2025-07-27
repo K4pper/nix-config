@@ -54,7 +54,7 @@
             "format": "{}% "
         },
         "network": {
-            "format-wifi": "",
+            "format-wifi": " ",
             "tooltip-format-wifi": "{essid} ({signalStrength}%)",
             "format-ethernet": "󰈀",
             "format-linked": "{ifname} (No IP)",
