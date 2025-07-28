@@ -46,3 +46,8 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "bicep",
     command = "setlocal shiftwidth=2 tabstop=2"
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "bicep-params",
+    command = "setlocal shiftwidth=2 tabstop=2"
+})
