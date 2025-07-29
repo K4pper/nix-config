@@ -88,10 +88,6 @@
       CPU_MIN_PERF_ON_BAT = 0;
       CPU_MAX_PERF_ON_BAT = 100;
 
-      #Optional helps save long term battery health
-      START_CHARGE_THRESH_BAT0 = 100; # 100 and below it starts to charge
-      STOP_CHARGE_THRESH_BAT0 = 100; # 100 and above it stops charging
-
     };
   };
   # This value determines the NixOS release from which the default
