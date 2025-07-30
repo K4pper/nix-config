@@ -88,6 +88,8 @@
       CPU_MIN_PERF_ON_BAT = 0;
       CPU_MAX_PERF_ON_BAT = 100;
 
+      STOP_CHARGE_THRESH_BAT0 = 80;
+
     };
   };
   # This value determines the NixOS release from which the default
