@@ -74,7 +74,7 @@ tooltip {
 }
 
 #pulseaudio {
-    color: @foam;
+    color: @text;
 }
 
 #battery {

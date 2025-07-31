@@ -62,8 +62,8 @@
             "format-alt": "{ifname}: {ipaddr}/{cidr}"
         },
         "pulseaudio": {
-            "format": "{volume}%   {format_source}",
-            "format-bluetooth": "{volume}%   {format_source}",
+            "format": "{volume}% ",
+            "format-bluetooth": "{volume}% ",
             "format-bluetooth-muted": " {format_source}",
             "format-muted": " {format_source}",
             "format-source": "{volume}% ",
