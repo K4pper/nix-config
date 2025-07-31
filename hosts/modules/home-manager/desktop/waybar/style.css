@@ -63,40 +63,9 @@ tooltip {
     padding: 0px 10px;
     margin: 2px 2px;
     border-radius: 8px;
+    color: @text;
 }
 
 #workspaces {
     padding: 0px 0px;
-}
-
-#window {
-    color: @love;
-}
-
-#pulseaudio {
-    color: @text;
-}
-
-#battery {
-    color: @rose;
-}
-
-#network {
-    color: @love;
-}
-
-#cpu {
-    color: @iris;
-}
-
-#memory {
-    color: @gold;
-}
-
-#clock {
-    color: @text;
-}
-
-#bluetooth {
-    color: @iris;
 }
