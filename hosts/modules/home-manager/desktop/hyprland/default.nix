@@ -37,6 +37,7 @@
       allow_small_split = true;
       orientation = "center";
       slave_count_for_center_master = 0;
+      center_master_fallback = "right";
       mfact = "0.55";
     };
     xwayland = {
