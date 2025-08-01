@@ -18,6 +18,7 @@ let
     '';
 
   };
+  toLua = str: "lua << EOF\n${str}\nEOF\n";
   toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
 in
 {
@@ -51,6 +52,10 @@ in
 
       nvim-web-devicons
       plenary-nvim
+      {
+        plugin = nvim-autopairs;
+        config = toLua "require(\"nvim-autopairs\").setup()";
+      }
       {
         plugin = rose-pine;
         config = "colorscheme rose-pine";
