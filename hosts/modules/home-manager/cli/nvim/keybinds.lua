@@ -37,6 +37,9 @@ map("n", "<leader>fb", ":Telescope buffers<CR>")
 -- lazygit
 map("n", "<leader>lg", "<CMD>LazyGit<CR>")
 
--- Tabbing
+-- oil
+map("n", "<leader>e", "<CMD>Oil<CR>")
+
+-- tabbing
 map("v", "<", "<gv")
 map("v", ">", ">gv")
