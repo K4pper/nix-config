@@ -13,7 +13,6 @@
     ./jq
     ./ripgrep
     ./gcc
-    ./bat
     ./fzf
     ./powershell
     ./trivy
