@@ -5,6 +5,7 @@
     ./discord
     ./obsidian
     ./google-chrome
+    ./librewolf
     ./firefox
     ./signal-desktop
     ./postman
