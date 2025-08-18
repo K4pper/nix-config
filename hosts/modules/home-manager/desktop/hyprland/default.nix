@@ -8,7 +8,7 @@
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty"; "$menu" = "wofi --show drun";
     "$lock" = "hyprlock";
-    "$browser" = "google-chrome-stable";
+    "$browser" = "librewolf";
     exec-once = [
       "hyprpolkitagent"
       "swaync"
