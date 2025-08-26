@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -87,6 +87,8 @@
       CPU_MAX_PERF_ON_AC = 100;
       CPU_MIN_PERF_ON_BAT = 0;
       CPU_MAX_PERF_ON_BAT = 100;
+      CPU_BOOST_ON_AC = 1;
+      CPU_BOOST_ON_BAT = 1;
 
       STOP_CHARGE_THRESH_BAT0 = 80;
 
