@@ -90,8 +90,6 @@
       CPU_BOOST_ON_AC = 1;
       CPU_BOOST_ON_BAT = 1;
 
-      STOP_CHARGE_THRESH_BAT0 = 80;
-
     };
   };
   # This value determines the NixOS release from which the default
