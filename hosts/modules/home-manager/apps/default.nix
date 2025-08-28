@@ -14,5 +14,6 @@
     ./vscodium
     ./telegram
     ./kooha
+    ./mpv
   ];
 }
