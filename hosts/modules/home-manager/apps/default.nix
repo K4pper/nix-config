@@ -13,5 +13,6 @@
     ./zathura
     ./vscodium
     ./telegram
+    ./kooha
   ];
 }
