@@ -13,5 +13,6 @@
     ./hyprshot
     ./swappy
     ./gammastep
+    ./kooha
   ];
 }
