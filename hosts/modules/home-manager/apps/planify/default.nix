@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    kooha
-    gst_all_1.gstreamer
+    planify
   ];
 }

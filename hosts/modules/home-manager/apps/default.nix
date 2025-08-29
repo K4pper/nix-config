@@ -15,5 +15,6 @@
     ./telegram
     ./kooha
     ./mpv
+    ./planify
   ];
 }
