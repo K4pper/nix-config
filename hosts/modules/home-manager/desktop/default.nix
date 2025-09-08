@@ -12,6 +12,5 @@
     ./swaync
     ./hyprshot
     ./swappy
-    ./gammastep
   ];
 }

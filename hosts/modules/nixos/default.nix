@@ -32,11 +32,6 @@
       gcr
     ];
 
-    services.geoclue2 = {
-      enable = true;
-      enableWifi = true;
-    };
-
     # Automatic cleanup
     nix.gc.automatic = true;
     nix.gc.dates = "daily";
