@@ -12,5 +12,6 @@
     ./swaync
     ./hyprshot
     ./swappy
+    ./hyprsunset
   ];
 }
