@@ -15,8 +15,7 @@
       "waybar"
     ];
     input = {
-      sensitivity = 0.1;
-      accel_profile = "adaptive";
+      sensitivity = 0.0;
       kb_layout = "us";
       kb_variant = "altgr-intl";
       touchpad = {
