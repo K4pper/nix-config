@@ -8,17 +8,12 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-25.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
-    nixvim,
     ...
   }@inputs:
 
@@ -51,7 +46,6 @@
         };
         modules = [
           ./hosts/t14/home.nix
-          nixvim.homeManagerModules.nixvim
         ];
       };
 
@@ -66,7 +60,6 @@
         };
         modules = [
           ./hosts/jupiter/home.nix
-          nixvim.homeManagerModules.nixvim
         ];
       };
     };
