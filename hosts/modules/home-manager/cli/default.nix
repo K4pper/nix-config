@@ -34,5 +34,6 @@
     ./pavucontrol
     ./go
     ./yazi
+    ./timg
   ];
 }
