@@ -35,5 +35,6 @@
     ./go
     ./yazi
     ./timg
+    ./dig
   ];
 }
