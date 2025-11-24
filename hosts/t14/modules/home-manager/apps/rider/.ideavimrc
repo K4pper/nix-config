@@ -1,0 +1,49 @@
+set visualbell
+set noerrorbells # save my sanity please
+
+set commentary
+autocmd FileType cs setlocal commentstring=//\ %s
+set clipboard+=unnamedplus
+" set clipboard+=ideaput
+
+:set relativenumber
+:set number 
+let mapleader=","
+
+" Not sure about this
+nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
+
+
+nmap <C-h> :action PrevSplitter<CR>
+nmap <C-l> :action NextSplitter<CR>
+
+nnoremap <leader>ff :action SearchEverywhere<CR>
+nnoremap <leader>fg :action FindInPath<CR>
+nnoremap gI :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gr :action ShowUsages<CR>
+
+" TODO: Check if this works properly
+nnoremap <leader>c :action Resume<CR>
+nnoremap <leader>b :action ToggleLineBreakpoint<CR>
+nnoremap <leader>si :action StepInto<CR>
+nnoremap <leader>so :action StepOver<CR>
+nnoremap <leader>sO :action StepOut<CR>
+nnoremap <leader>t :action Stop<CR>
+nnoremap <leader>dbg :action Debug<CR>
+
+nnoremap <leader>ra :action RenameElement<CR>
+" nnoremap gcc :action CommentByLineComment<CR>
+nnoremap <leader>lf :action ReformatCode<CR>
+" Git blame toggle
+nnoremap <leader>gb :action Annotate<CR>
+
+nnoremap <leader>rr :action Rerun<CR>
+nnoremap H :action Back<CR>
+nnoremap L :action Forward<CR>
+
+vnoremap < <gv
+vnoremap > >gv
+
+" Emulated plugins
+Plug 'tpope/vim-surround'
