@@ -16,6 +16,7 @@
     ];
     input = {
       sensitivity = 0.0;
+      accel_profile = "flat";
       kb_layout = "us";
       kb_variant = "altgr-intl";
       touchpad = {
