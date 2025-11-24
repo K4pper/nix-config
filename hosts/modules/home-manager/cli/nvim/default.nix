@@ -6,7 +6,7 @@ let
 
     src = pkgs.fetchurl {
       url = "https://github.com/Azure/bicep/releases/download/v${version}/bicep-langserver.zip";
-      sha256 = "sha256-2SBqE4q1IZQ7U3hwEReV8tQAihqoVs36f5K28DrdCYk=";
+      sha256 = "sha256-2bBdit3E9I70iJFLsK2kQM5XekTx2dX9a/+kvFKszB4=";
     };
 
     buildInputs = [ pkgs.unzip ];
