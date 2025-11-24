@@ -3,7 +3,7 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     monitor = [
-      "HDMI-A-1,5120x1440@60.00,auto,1"
+      ", preferred, auto, 1"
     ];
     "$mainMod" = "$SUPER";
     "$terminal" = "alacritty"; "$menu" = "wofi --show drun";
@@ -24,6 +24,8 @@
     };
     env = [
       "HYPRCURSOR_THEME,rose-pine-hyprcursor"
+      "LIBVA_DRIVER_NAME,nvidia"
+      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
     ];
     general = {
       layout = "master";
@@ -114,4 +116,5 @@
     ];
   };
 }
+
 

@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ./cli
-    ./desktop
+    ./hyprland
   ];
 }
+

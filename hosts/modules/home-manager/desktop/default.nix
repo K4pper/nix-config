@@ -3,7 +3,6 @@
   imports = [
     ./fonts
     ./gtk
-    ./hyprland
     ./hyprpolkitagent
     ./wofi
     ./hyprlock

@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     protonup
     mangohud
+    egl-wayland
   ];
   programs.steam = {
     enable = true;
@@ -14,6 +15,16 @@
     enable = true;
     enable32Bit = true;
   };
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
 
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = true;
+    nvidiaSettings = true;
+  };
 }
