@@ -29,7 +29,6 @@
     ./kubectl-tree
     ./htop
     ./unzip
-    ./dotnet-sdk
     ./ssh
     ./pavucontrol
     ./go
