@@ -32,6 +32,7 @@ in
       nixfmt-rfc-style
       nil
       lua-language-server
+      csharp-ls
       docker-compose-language-service
       bicepLanguageServer
     ];
@@ -92,6 +93,7 @@ in
           p.tree-sitter-markdown-inline
           p.tree-sitter-yaml
           p.tree-sitter-dockerfile
+          p.tree-sitter-c_sharp
           (pkgs.tree-sitter.buildGrammar {
             language = "bicep";
             version = "bff5988";

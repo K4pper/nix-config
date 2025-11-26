@@ -35,5 +35,6 @@
     ./yazi
     ./timg
     ./dig
+    ./syncthing
   ];
 }
