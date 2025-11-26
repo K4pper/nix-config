@@ -14,7 +14,7 @@
       background = [
       {
         path = "~/.config/hypr/hyprlock.png";
-        blur_passes = 2;
+        blur_passes = 1;
         contrast = 0.8916;
         brightness = 0.8172;
         vibrancy = 0.1696;
